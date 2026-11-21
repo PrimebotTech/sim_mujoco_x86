@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from aimdk_msgs/srv/GetMcTaskState.srv
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/CommonTaskRequest.idl"
+#include "aimdk_msgs/msg/CommonTaskResponse.idl"
+
+module aimdk_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "Request 部分")
+    struct GetMcTaskState_Request {
+      aimdk_msgs::msg::CommonTaskRequest request;
+    };
+    struct GetMcTaskState_Response {
+      aimdk_msgs::msg::CommonTaskResponse response;
+    };
+  };
+};

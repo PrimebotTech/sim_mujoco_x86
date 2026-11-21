@@ -1,0 +1,38 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from aimdk_msgs/srv/GetBatteryInfo.srv
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/CommonRequest.idl"
+#include "aimdk_msgs/msg/CommonResponse.idl"
+
+module aimdk_msgs {
+  module srv {
+    struct GetBatteryInfo_Request {
+      aimdk_msgs::msg::CommonRequest request;
+    };
+    struct GetBatteryInfo_Response {
+      aimdk_msgs::msg::CommonResponse response;
+
+      @verbatim (language="comment", text=
+        "版本信息" "\n"
+        "厂家信息")
+      string manufacturer;
+
+      @verbatim (language="comment", text=
+        "序列号")
+      string serial_number;
+
+      @verbatim (language="comment", text=
+        "协议版本")
+      string protocol_version;
+
+      @verbatim (language="comment", text=
+        "硬件版本")
+      string hardware_version;
+
+      @verbatim (language="comment", text=
+        "软件版本")
+      string software_version;
+    };
+  };
+};

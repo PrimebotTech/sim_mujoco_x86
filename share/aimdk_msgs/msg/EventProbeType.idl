@@ -1,0 +1,29 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from aimdk_msgs/msg/EventProbeType.msg
+// generated code does not contain a copyright notice
+
+
+module aimdk_msgs {
+  module msg {
+    module EventProbeType_Constants {
+      @verbatim (language="comment", text=
+        "未定义")
+      const int32 UNDEFINED = 0;
+      @verbatim (language="comment", text=
+        "一般的事件记录，比如系统发生的某个特定动作或状态变化。可能需要说明它是用来记录事件发生的次数或者事件本身的信息")
+      const int32 EVENT = 1;
+      @verbatim (language="comment", text=
+        "通常用来表示累积的数值，比如计数器，每次事件发生就增加。可能需要强调它的递增特性，适用于统计总数，比如请求次数、错误次数等。")
+      const int32 COUNTER = 2;
+      @verbatim (language="comment", text=
+        "通常用来表示一个值，可能需要说明它的单位，比如温度、压力等。")
+      const int32 GAUGE = 3;
+      @verbatim (language="comment", text=
+        "布尔类型，表示两种状态，比如真或假，开启或关闭。需要明确它用于二元状态的情况。")
+      const int32 BOOLEAN = 4;
+    };
+    struct EventProbeType {
+      int32 value;
+    };
+  };
+};

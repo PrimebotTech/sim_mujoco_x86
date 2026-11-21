@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from aimdk_msgs/msg/ServoCommand.msg
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/MessageHeader.idl"
+
+module aimdk_msgs {
+  module msg {
+    struct ServoCommand {
+      @verbatim (language="comment", text=
+        "消息头信息")
+      aimdk_msgs::msg::MessageHeader header;
+
+      @verbatim (language="comment", text=
+        "头部舵机控制角度，单位 rad，0-pi/2")
+      float position;
+    };
+  };
+};

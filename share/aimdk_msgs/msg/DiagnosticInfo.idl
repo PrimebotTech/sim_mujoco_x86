@@ -1,0 +1,35 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from aimdk_msgs/msg/DiagnosticInfo.msg
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/DiagnosticType.idl"
+
+module aimdk_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "ns 时间辍")
+    struct DiagnosticInfo {
+      uint64 timestamp;
+
+      @verbatim (language="comment", text=
+        "异常类型")
+      aimdk_msgs::msg::DiagnosticType type;
+
+      @verbatim (language="comment", text=
+        "模块ID")
+      uint8 module_id;
+
+      @verbatim (language="comment", text=
+        "模块诊断码")
+      uint32 code;
+
+      @verbatim (language="comment", text=
+        "模块诊断码")
+      uint64 diag_code;
+
+      @verbatim (language="comment", text=
+        "模块诊断信息")
+      string info;
+    };
+  };
+};

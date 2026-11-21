@@ -1,0 +1,30 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from aimdk_msgs/srv/RegisterCustomMotion.srv
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/CommonTaskResponse.idl"
+
+module aimdk_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "此接口是注册动作到mc的接口")
+    struct RegisterCustomMotion_Request {
+      @verbatim (language="comment", text=
+        "动作名称")
+      string motion;
+
+      @verbatim (language="comment", text=
+        "资源路径")
+      string res_path;
+
+      @verbatim (language="comment", text=
+        "注册动作是否落盘(暂时不可用)")
+      boolean write_to_disk;
+    };
+    struct RegisterCustomMotion_Response {
+      @verbatim (language="comment", text=
+        "响应头")
+      aimdk_msgs::msg::CommonTaskResponse response;
+    };
+  };
+};

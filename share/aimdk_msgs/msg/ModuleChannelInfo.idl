@@ -1,0 +1,50 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from aimdk_msgs/msg/ModuleChannelInfo.msg
+// generated code does not contain a copyright notice
+
+
+module aimdk_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "话题名")
+    struct ModuleChannelInfo {
+      string name;
+
+      @verbatim (language="comment", text=
+        "类型名")
+      string type;
+
+      @verbatim (language="comment", text=
+        "当前频率（Hz）")
+      double frequency;
+
+      @verbatim (language="comment", text=
+        "最小时间差(ms)")
+      double min_time_diff;
+
+      @verbatim (language="comment", text=
+        "最大时间差(ms)")
+      double max_time_diff;
+
+      @verbatim (language="comment", text=
+        "标准差(ms)")
+      double std_dev;
+
+      @verbatim (language="comment", text=
+        "统计滑动窗口大小(ms)")
+      int32 window_size;
+
+      @verbatim (language="comment", text=
+        "超时阈值(ms)")
+      double timeout_threshold;
+
+      @verbatim (language="comment", text=
+        "是否活跃(只要收到过一帧消息，则置为true，未收到则为false)")
+      boolean is_active;
+
+      @verbatim (language="comment", text=
+        "通讯后端")
+      sequence<string> backends;
+    };
+  };
+};

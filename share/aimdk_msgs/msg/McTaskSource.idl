@@ -1,0 +1,46 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from aimdk_msgs/msg/McTaskSource.msg
+// generated code does not contain a copyright notice
+
+
+module aimdk_msgs {
+  module msg {
+    module McTaskSource_Constants {
+      @verbatim (language="comment", text=
+        "未知/未指定")
+      const int32 UNKNOWN = 0;
+      @verbatim (language="comment", text=
+        "APP")
+      const int32 APP = 1;
+      @verbatim (language="comment", text=
+        "云端")
+      const int32 CLOUD = 2;
+      @verbatim (language="comment", text=
+        "遥控器")
+      const int32 RC = 3;
+      @verbatim (language="comment", text=
+        "SDK/RPC 直接调用")
+      const int32 SDK_RPC = 4;
+      @verbatim (language="comment", text=
+        "agent")
+      const int32 AGENT = 5;
+      @verbatim (language="comment", text=
+        "task engine 自动任务")
+      const int32 TASK_ENGINE = 6;
+      @verbatim (language="comment", text=
+        "MC 内部自动切换（如 Moving → Stable 稳态复位）")
+      const int32 MC_INTERNAL = 7;
+      @verbatim (language="comment", text=
+        "Insta360")
+      const int32 INSTA360 = 8;
+      @verbatim (language="comment", text=
+        "其他")
+      const int32 OTHER = 255;
+    };
+    @verbatim (language="comment", text=
+      "定义 Action 触发源")
+    struct McTaskSource {
+      int32 value;
+    };
+  };
+};

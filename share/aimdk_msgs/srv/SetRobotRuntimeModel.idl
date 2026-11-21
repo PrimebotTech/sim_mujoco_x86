@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from aimdk_msgs/srv/SetRobotRuntimeModel.srv
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/CommonTaskResponse.idl"
+#include "aimdk_msgs/msg/McRuntimeModel.idl"
+#include "aimdk_msgs/msg/RequestHeader.idl"
+
+module aimdk_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "请求头")
+    struct SetRobotRuntimeModel_Request {
+      aimdk_msgs::msg::RequestHeader header;
+
+      aimdk_msgs::msg::McRuntimeModel runtime_model;
+    };
+    struct SetRobotRuntimeModel_Response {
+      aimdk_msgs::msg::CommonTaskResponse response;
+    };
+  };
+};

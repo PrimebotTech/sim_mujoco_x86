@@ -1,0 +1,49 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from aimdk_msgs/msg/EventProbeInfo.msg
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/EventProbeAttr.idl"
+#include "aimdk_msgs/msg/EventProbeType.idl"
+
+module aimdk_msgs {
+  module msg {
+    module EventProbeInfo_Constants {
+      const uint8 EA_STATUS_DEFAULT = 0;
+      const uint8 EA_STATUS_START = 1;
+      const uint8 EA_STATUS_END = 2;
+    };
+    struct EventProbeInfo {
+      @verbatim (language="comment", text=
+        "事件状态")
+      uint8 status;
+
+      @verbatim (language="comment", text=
+        "事件时间戳")
+      uint64 timestamp;
+
+      @verbatim (language="comment", text=
+        "事件类型")
+      aimdk_msgs::msg::EventProbeType type;
+
+      @verbatim (language="comment", text=
+        "模块ID")
+      uint8 module_id;
+
+      @verbatim (language="comment", text=
+        "事件ID")
+      uint32 event_id;
+
+      @verbatim (language="comment", text=
+        "模块时间码")
+      uint64 event_code;
+
+      @verbatim (language="comment", text=
+        "模块事件信息")
+      string desc;
+
+      @verbatim (language="comment", text=
+        "事件属性")
+      sequence<aimdk_msgs::msg::EventProbeAttr> attrs;
+    };
+  };
+};

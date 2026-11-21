@@ -1,0 +1,49 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from aimdk_msgs/msg/McBodyPose.msg
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/MessageHeader.idl"
+
+module aimdk_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "消息头")
+    struct McBodyPose {
+      aimdk_msgs::msg::MessageHeader header;
+
+      @verbatim (language="comment", text=
+        "输入源")
+      string source;
+
+      @verbatim (language="comment", text=
+        "站立高度 (站直/下蹲)， 正值站立， 负值下蹲" "\n"
+        "单位：m，距离地面的高度")
+      double stand_height;
+
+      @verbatim (language="comment", text=
+        "身体前倾/后倾, 正值前倾， 负值后倾" "\n"
+        "单位：rad")
+      double bend_forward;
+
+      @verbatim (language="comment", text=
+        "身体侧弯, 正值左侧弯， 负值右侧弯" "\n"
+        "单位：rad")
+      double bend_sideways;
+
+      @verbatim (language="comment", text=
+        "腰部旋转， 正值左转， 负值右转" "\n"
+        "单位：rad")
+      double twist_waist;
+
+      @verbatim (language="comment", text=
+        "点头/抬头，正值低头，负值抬头" "\n"
+        "单位：rad")
+      double raise_head;
+
+      @verbatim (language="comment", text=
+        "头部旋转，正值左转，负值右转" "\n"
+        "单位：rad")
+      double turn_head;
+    };
+  };
+};

@@ -1,0 +1,89 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from aimdk_msgs/srv/SetHalCameraStream.srv
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/CommonRequest.idl"
+#include "aimdk_msgs/msg/CommonResponse.idl"
+
+module aimdk_msgs {
+  module srv {
+    module SetHalCameraStream_Request_Constants {
+      const uint8 SET = 0;
+      const uint8 GET = 1;
+      @verbatim (language="comment", text=
+        "双目左 or 低配单目")
+      const uint32 CAMERA_0 = 1;
+      @verbatim (language="comment", text=
+        "双目右")
+      const uint32 CAMERA_1 = 2;
+      @verbatim (language="comment", text=
+        "鱼眼左")
+      const uint32 CAMERA_2 = 4;
+      @verbatim (language="comment", text=
+        "鱼眼右")
+      const uint32 CAMERA_3 = 8;
+    };
+    @verbatim (language="comment", text=
+      "--------------------------------------------------------------------------------------------------------------" "\n"
+      "hal_camera 相机关闭/打开 热切换接口" "\n"
+      "用于整机进入/退出低功耗或充电状态时，热关闭/热启动 相机" "\n"
+      "--------------------------------------------------------------------------------------------------------------")
+    struct SetHalCameraStream_Request {
+      @verbatim (language="comment", text=
+        "请求头")
+      aimdk_msgs::msg::CommonRequest request;
+
+      @verbatim (language="comment", text=
+        "请求唯一标识，用于问题定位")
+      string trace_id;
+
+      @verbatim (language="comment", text=
+        "请求类型，0: SET 1: GET")
+      uint8 req_type;
+
+      @verbatim (language="comment", text=
+        " 目标相机电源控制mask，0关闭 1打开" "\n"
+        "预留")
+      uint32 power_ctrl_mask;
+
+      @verbatim (language="comment", text=
+        "目标相机出流控制mask，0关闭 1打开")
+      uint32 stream_ctrl_mask;
+    };
+    module SetHalCameraStream_Response_Constants {
+      @verbatim (language="comment", text=
+        "最近一次请求失败")
+      const uint8 REQ_FAILED = 0;
+      @verbatim (language="comment", text=
+        "最近一次切换成功")
+      const uint8 REQ_SUCCESS = 1;
+      @verbatim (language="comment", text=
+        "已经切换完成")
+      const uint8 STATE_SWITCHED = 0;
+      @verbatim (language="comment", text=
+        "正在切换中")
+      const uint8 STATE_SWITCHING = 1;
+    };
+    struct SetHalCameraStream_Response {
+      @verbatim (language="comment", text=
+        "响应头（结果以 status 为准）")
+      aimdk_msgs::msg::CommonResponse response;
+
+      @verbatim (language="comment", text=
+        "本次响应对于的请求id")
+      string trace_id;
+
+      @verbatim (language="comment", text=
+        "热切换结果，0 失败 1 成功")
+      uint8 req_result;
+
+      @verbatim (language="comment", text=
+        "上一次执行steam_ctrl_mask")
+      uint32 target_state_mask;
+
+      @verbatim (language="comment", text=
+        "当前切换状态")
+      uint8 switch_state;
+    };
+  };
+};

@@ -1,0 +1,38 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from aimdk_msgs/msg/McPostureState.msg
+// generated code does not contain a copyright notice
+
+
+module aimdk_msgs {
+  module msg {
+    module McPostureState_Constants {
+      @verbatim (language="comment", text=
+        "未知姿态")
+      const uint8 UNKNOWN = 0;
+      @verbatim (language="comment", text=
+        "双足站姿")
+      const uint8 STANDING = 1;
+      @verbatim (language="comment", text=
+        "仰卧，面朝上")
+      const uint8 LYING_FACE_UP = 2;
+      @verbatim (language="comment", text=
+        "俯卧，面朝下")
+      const uint8 LYING_FACE_DOWN = 3;
+      @verbatim (language="comment", text=
+        "坐姿（零力矩模式下躯干直立且腿部符合坐姿构型）")
+      const uint8 SEATED = 4;
+      @verbatim (language="comment", text=
+        "开箱姿态")
+      const uint8 OPEN_BOX = 5;
+    };
+    @verbatim (language="comment", text=
+      "-----------------------------------------------------------------------------------" "\n"
+      "机器人姿态检测结果 (security_guard 姿态检测)" "\n"
+      "-----------------------------------------------------------------------------------")
+    struct McPostureState {
+      @verbatim (language="comment", text=
+        "当前姿态")
+      uint8 current_posture;
+    };
+  };
+};

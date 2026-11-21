@@ -1,0 +1,6 @@
+
+
+CommonTaskResponse response
+
+# 当前存在的动作列表
+McMotion[] motion

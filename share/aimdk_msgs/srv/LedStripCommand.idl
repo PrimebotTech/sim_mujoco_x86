@@ -1,0 +1,114 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from aimdk_msgs/srv/LedStripCommand.srv
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/CommonRequest.idl"
+#include "aimdk_msgs/msg/CommonResponse.idl"
+
+module aimdk_msgs {
+  module srv {
+    module LedStripCommand_Request_Constants {
+      @verbatim (language="comment", text=
+        "led_strip_mode: 灯带模式枚举" "\n"        "全部熄灭")
+      const uint8 LED_ALL_OFF = 0;
+      @verbatim (language="comment", text=
+        "绿色流水")
+      const uint8 LED_GREEN_FLOW = 1;
+      @verbatim (language="comment", text=
+        "彩虹")
+      const uint8 LED_RAINBOW = 2;
+      @verbatim (language="comment", text=
+        "律动")
+      const uint8 LED_DANCING = 3;
+      @verbatim (language="comment", text=
+        "星光闪烁")
+      const uint8 LED_TWINKLE = 4;
+      @verbatim (language="comment", text=
+        "尾部渐亮")
+      const uint8 LED_TAIL_INCREASE = 5;
+      @verbatim (language="comment", text=
+        "尾部渐暗")
+      const uint8 LED_TAIL_DECREASE = 6;
+      @verbatim (language="comment", text=
+        "白色流水-蓝色流水交替")
+      const uint8 LED_FOUR_TO_TWO_LEGS = 7;
+      @verbatim (language="comment", text=
+        "蓝色流水-白色流水交替")
+      const uint8 LED_TWO_TO_FOUR_LEGS = 8;
+      @verbatim (language="comment", text=
+        "白色常亮r=g=b=128")
+      const uint8 LED_START_UP = 9;
+      @verbatim (language="comment", text=
+        "白色流水")
+      const uint8 LED_DISPLAY_CHARGING = 10;
+      @verbatim (language="comment", text=
+        "红色快闪")
+      const uint8 LED_DISPLAY_FAULT = 11;
+      @verbatim (language="comment", text=
+        "黄色长亮")
+      const uint8 LED_DISPLAY_25_LOW_BATTERY = 12;
+      @verbatim (language="comment", text=
+        "橙红闪烁")
+      const uint8 LED_DISPLAY_15_LOW_BATTERY = 13;
+      @verbatim (language="comment", text=
+        "白色从亮到暗渐变")
+      const uint8 LED_DISPLAY_POWER_OFF = 14;
+      @verbatim (language="comment", text=
+        "白色从暗到亮渐变")
+      const uint8 LED_DISPLAY_POWER_ON = 15;
+      @verbatim (language="comment", text=
+        "白色填充")
+      const uint8 LED_WHITE_FLOW = 16;
+      @verbatim (language="comment", text=
+        "白色常亮r=g=b=150")
+      const uint8 LED_WHITE_ON = 17;
+      @verbatim (language="comment", text=
+        "黄色流水")
+      const uint8 LED_DISPLAY_25_LOW_TRANSFORM = 18;
+      @verbatim (language="comment", text=
+        "橙红流水")
+      const uint8 LED_DISPLAY_15_LOW_TRANSFORM = 19;
+      @verbatim (language="comment", text=
+        "白色呼吸")
+      const uint8 LED_WHITE_BREATH = 20;
+      @verbatim (language="comment", text=
+        "呼吸灯效自定义模式")
+      const uint8 LED_CUSTOM_BREATH = 254;
+      @verbatim (language="comment", text=
+        "闪烁灯效自定义模式")
+      const uint8 LED_CUSTOM_BLINK = 255;
+    };
+    @verbatim (language="comment", text=
+      "Request")
+    struct LedStripCommand_Request {
+      aimdk_msgs::msg::CommonRequest request;
+
+      @verbatim (language="comment", text=
+        "灯带模式")
+      uint8 led_strip_mode;
+
+      @verbatim (language="comment", text=
+        "红色分量，自定义模式下生效")
+      uint8 r;
+
+      @verbatim (language="comment", text=
+        "绿色分量，自定义模式下生效")
+      uint8 g;
+
+      @verbatim (language="comment", text=
+        "蓝色分量，自定义模式下生效")
+      uint8 b;
+
+      @verbatim (language="comment", text=
+        "周期，自定义模式下生效，单位ms。" "\n"
+        "呼吸灯效自定义模式下，0表示常亮，非0值表示呼吸灯效从最亮到熄灭的时间。" "\n"
+        "闪烁灯效自定义模式下，0表示常亮，非0值表示点亮或者熄灭的保持时间。")
+      uint16 period;
+    };
+    struct LedStripCommand_Response {
+      @verbatim (language="comment", text=
+        "响应头")
+      aimdk_msgs::msg::CommonResponse header;
+    };
+  };
+};

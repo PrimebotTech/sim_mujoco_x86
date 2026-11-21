@@ -1,0 +1,34 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from aimdk_msgs/msg/MusicInfo.msg
+// generated code does not contain a copyright notice
+
+
+module aimdk_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "-----------------------------------------------------------------------------------" "\n"
+      "单首歌曲的信息" "\n"
+      "-----------------------------------------------------------------------------------")
+    struct MusicInfo {
+      @verbatim (language="comment", text=
+        "歌曲id")
+      string id;
+
+      @verbatim (language="comment", text=
+        "歌曲名称")
+      string name;
+
+      @verbatim (language="comment", text=
+        "歌手列表")
+      sequence<string> artist;
+
+      @verbatim (language="comment", text=
+        "时长（毫秒）")
+      int32 duration_ms;
+
+      @verbatim (language="comment", text=
+        "歌曲来源平台，例如qqmusic")
+      string source;
+    };
+  };
+};

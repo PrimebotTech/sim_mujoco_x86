@@ -1,0 +1,50 @@
+actual:
+  active_joint_frame_type: ["joint"]
+  active_joint_name: [
+    [
+      "FL_HIP_ROLL_Joint",
+      "FL_HIP_PITCH_Joint",
+      "FL_KNEE_Joint",
+
+      "FR_HIP_ROLL_Joint",
+      "FR_HIP_PITCH_Joint",
+      "FR_KNEE_Joint",
+
+      "RL_HIP_ROLL_Joint",
+      "RL_HIP_PITCH_Joint",
+      "RL_KNEE_Joint",
+      "RL_FOOT_Joint",
+
+      "RR_HIP_ROLL_Joint",
+      "RR_HIP_PITCH_Joint",
+      "RR_KNEE_Joint",
+      "RR_FOOT_Joint",
+    ],
+  ]
+
+  active_joint_control_type: [
+    ["torque", "torque", "torque", "torque", "torque", "torque",
+     "torque", "torque", "torque", "torque", "torque", "torque", "torque", "torque"],
+  ]
+
+sensor:
+  passive_joint_frame_type: []
+  passive_joint_name: []
+
+  sensor_frame_type: ["imu"]
+  sensor_name: [
+      [
+        "body-orientation",
+        "body-angular-velocity",
+        "body-linear-pos",
+        "body-linear-vel",
+        "body-linear-acceleration",
+      ], #imu
+    ]
+
+logical:
+  nominal_configuration:
+    [
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+    ]

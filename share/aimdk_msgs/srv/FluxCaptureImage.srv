@@ -1,0 +1,9 @@
+# FluxCaptureImage.srv — flux 拍照 RPC 服务
+
+# request
+uint32 quality          # JPEG quality 1-100, 0 = use server default (100)
+---
+# response
+int32 status            # 0=success, non-zero=fail
+int32 reason            # error reason code (0 when success)
+string message          # human-readable status/error message

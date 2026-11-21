@@ -1,0 +1,65 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from aimdk_msgs/srv/SetMcMotion.srv
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/CommonTaskResponse.idl"
+#include "aimdk_msgs/msg/RequestHeader.idl"
+
+module aimdk_msgs {
+  module srv {
+    module SetMcMotion_Request_Constants {
+      @verbatim (language="comment", text=
+        "自有模型")
+      const int32 MIMIC_QY = 1;
+      @verbatim (language="comment", text=
+        "灵创模型")
+      const int32 MIMIC_LC = 2;
+      @verbatim (language="comment", text=
+        "预先加载")
+      const int32 PRELOAD = 1;
+      @verbatim (language="comment", text=
+        "开始执行")
+      const int32 EXECUTION = 2;
+    };
+    @verbatim (language="comment", text=
+      "此接口是播放全身动作接口")
+    struct SetMcMotion_Request {
+      @verbatim (language="comment", text=
+        "请求头")
+      aimdk_msgs::msg::RequestHeader header;
+
+      @verbatim (language="comment", text=
+        "触发源 定义见 McTaskSource.msg")
+      string source;
+
+      @verbatim (language="comment", text=
+        "资源类型")
+      int32 type;
+
+      @verbatim (language="comment", text=
+        "全身动作名称，若motion为空，加载model中resource; 反之，从本地加载执行资源。")
+      string motion;
+
+      @verbatim (language="comment", text=
+        "onnx 模型绝对路径")
+      string model;
+
+      @verbatim (language="comment", text=
+        "资源绝对路径，比如轨迹参考")
+      string resource;
+
+      @verbatim (language="comment", text=
+        "是否打断(给后面animation接口合并预留)")
+      boolean interrupt;
+
+      @verbatim (language="comment", text=
+        "操作类型")
+      int32 operation;
+    };
+    struct SetMcMotion_Response {
+      @verbatim (language="comment", text=
+        "响应头")
+      aimdk_msgs::msg::CommonTaskResponse response;
+    };
+  };
+};

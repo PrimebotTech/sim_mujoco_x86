@@ -1,0 +1,11 @@
+# 此接口是注册动作到mc的接口
+
+# 动作名称
+string motion
+
+# 资源路径
+string res_path
+
+# 注册动作是否落盘(暂时不可用)
+bool write_to_disk
+

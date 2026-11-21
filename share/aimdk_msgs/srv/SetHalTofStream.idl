@@ -1,0 +1,75 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from aimdk_msgs/srv/SetHalTofStream.srv
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/CommonRequest.idl"
+#include "aimdk_msgs/msg/CommonResponse.idl"
+
+module aimdk_msgs {
+  module srv {
+    module SetHalTofStream_Request_Constants {
+      @verbatim (language="comment", text=
+        "全部 5 路 TOF（默认）")
+      const uint32 CAMERA_ALL = 31;
+      @verbatim (language="comment", text=
+        "main tof")
+      const uint32 CAMERA_TOF_0 = 1;
+      @verbatim (language="comment", text=
+        "front tof")
+      const uint32 CAMERA_TOF_1 = 2;
+      @verbatim (language="comment", text=
+        "rear tof")
+      const uint32 CAMERA_TOF_2 = 4;
+      @verbatim (language="comment", text=
+        "left tof")
+      const uint32 CAMERA_TOF_3 = 8;
+      @verbatim (language="comment", text=
+        "right tof")
+      const uint32 CAMERA_TOF_4 = 16;
+    };
+    @verbatim (language="comment", text=
+      "--------------------------------------------------------------------------------------------------------------" "\n"
+      "hal_rgbd TOF 热切换接口" "\n"
+      "用于整机进入/退出低功耗或充电状态时，热关闭/热启动 TOF 相机" "\n"
+      "--------------------------------------------------------------------------------------------------------------")
+    struct SetHalTofStream_Request {
+      @verbatim (language="comment", text=
+        "请求头")
+      aimdk_msgs::msg::CommonRequest request;
+
+      @verbatim (language="comment", text=
+        "请求唯一标识，用于问题定位")
+      string trace_id;
+
+      @verbatim (language="comment", text=
+        " 目标相机电源控制mask，0关闭 1打开" "\n"
+        "预留")
+      uint32 power_ctrl_mask;
+
+      @verbatim (language="comment", text=
+        "目标相机出流控制mask，0关闭 1打开")
+      uint32 stream_ctrl_mask;
+    };
+    module SetHalTofStream_Response_Constants {
+      @verbatim (language="comment", text=
+        "最近一次请求的切换失败")
+      const uint8 SWITCH_FAILED = 0;
+      @verbatim (language="comment", text=
+        "最近一次切换成功")
+      const uint8 SWITCH_SUCCESS = 1;
+    };
+    struct SetHalTofStream_Response {
+      @verbatim (language="comment", text=
+        "响应头（结果以 status 为准）")
+      aimdk_msgs::msg::CommonResponse response;
+
+      @verbatim (language="comment", text=
+        "本次响应对于的请求id")
+      string trace_id;
+
+      @verbatim (language="comment", text=
+        "热切换结果，0 失败 1 成功")
+      uint8 switch_state;
+    };
+  };
+};

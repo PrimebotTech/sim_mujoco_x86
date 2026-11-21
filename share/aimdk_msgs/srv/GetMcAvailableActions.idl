@@ -1,0 +1,30 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from aimdk_msgs/srv/GetMcAvailableActions.srv
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/CommonRequest.idl"
+#include "aimdk_msgs/msg/McActionCommand.idl"
+#include "aimdk_msgs/msg/ResponseHeader.idl"
+
+module aimdk_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "Request 部分")
+    struct GetMcAvailableActions_Request {
+      aimdk_msgs::msg::CommonRequest request;
+    };
+    struct GetMcAvailableActions_Response {
+      @verbatim (language="comment", text=
+        "响应头")
+      aimdk_msgs::msg::ResponseHeader header;
+
+      @verbatim (language="comment", text=
+        "可用的Action列表")
+      sequence<string> actions;
+
+      @verbatim (language="comment", text=
+        "可用的Action命令列表")
+      sequence<aimdk_msgs::msg::McActionCommand> commands;
+    };
+  };
+};

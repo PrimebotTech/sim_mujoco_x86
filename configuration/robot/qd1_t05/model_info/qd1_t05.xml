@@ -1,0 +1,218 @@
+<mujoco model="URDF-QD1-T0">
+  <compiler angle='radian' eulerseq="XYZ" meshdir="../meshes" />
+  <option timestep="0.001"/>
+  <!-- <compiler angle="radian" meshdir="../meshes/"/ autolimits="true"> -->
+
+  <default>
+    <default class="QD1">
+      <!-- <geom solref="-500 -50" solimp="0.9 0.95 0.001"/> -->
+      <joint damping="0.0" armature="0.00" frictionloss="0.0" />
+    </default>
+  </default>
+
+  <asset>
+    <mesh name="BASELINK" file="BASELINK.STL"/>
+    <mesh name="FL_HIP_ROLL_Link" file="FL_HIP_ROLL_Link.STL"/>
+    <mesh name="FL_HIP_PITCH_Link" file="FL_HIP_PITCH_Link.STL"/>
+    <mesh name="FL_KNEE_Link" file="FL_KNEE_Link.STL"/>
+    <mesh name="FL_FOOT_Link" file="FL_FOOT_Link.STL"/>
+    <mesh name="FR_HIP_ROLL_Link" file="FR_HIP_ROLL_Link.STL"/>
+    <mesh name="FR_HIP_PITCH_Link" file="FR_HIP_PITCH_Link.STL"/>
+    <mesh name="FR_KNEE_Link" file="FR_KNEE_Link.STL"/>
+    <mesh name="FR_FOOT_Link" file="FR_FOOT_Link.STL"/>
+    <mesh name="RL_HIP_ROLL_Link" file="RL_HIP_ROLL_Link.STL"/>
+    <mesh name="RL_HIP_PITCH_Link" file="RL_HIP_PITCH_Link.STL"/>
+    <mesh name="RL_KNEE_Link" file="RL_KNEE_Link.STL"/>
+    <mesh name="RL_FOOT_Link" file="RL_FOOT_Link.STL"/>
+    <mesh name="RR_HIP_ROLL_Link" file="RR_HIP_ROLL_Link.STL"/>
+    <mesh name="RR_HIP_PITCH_Link" file="RR_HIP_PITCH_Link.STL"/>
+    <mesh name="RR_KNEE_Link" file="RR_KNEE_Link.STL"/>
+    <mesh name="RR_FOOT_Link" file="RR_FOOT_Link.STL"/>
+  </asset>
+
+  <worldbody>
+    <body name="BASELINK" pos="0 0 0.5">
+      <inertial pos="0.030738 -0.000339 0.003627" quat="0.00361933 0.703254 0.00391014 0.710919" mass="5.32777" diaginertia="0.0748561 0.0622506 0.0269694"/>
+      <freejoint />
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.75294 0.75294 0.75294 1" mesh="BASELINK"/>
+      <geom size="0.12 0.105 0.05" type="box" rgba="0.75294 0.75294 0.75294 1"/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.75294 0.75294 0.75294 1" mesh="BASELINK"/>
+      <geom size="0.125 0.105 0.075" type="box" rgba="0.75294 0.75294 0.75294 1"/>
+      <geom size="0.035 0.055 0.022" pos="0.278 0 -0.014" type="box" rgba="0.75294 0.75294 0.75294 1"/>
+      <body name="FL_HIP_ROLL_Link" pos="0.175 0.06 0">
+        <inertial pos="-0.003867 -0.011312 -1.1e-05" quat="0.167398 0.677727 -0.182981 0.69223" mass="0.49325" diaginertia="0.000326025 0.000307847 0.000265127"/>
+        <joint name="FL_HIP_ROLL_Joint" pos="0 0 0" axis="1 0 0" range="-0.5236 0.5236" actuatorfrcrange="-15 15"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.75294 0.75294 0.75294 1" mesh="FL_HIP_ROLL_Link"/>
+        <geom size="0.03 0.045" quat="0.499998 -0.500002 0.5 0.5" type="cylinder" rgba="0.75294 0.75294 0.75294 1"/>
+        <body name="FL_HIP_PITCH_Link">
+          <inertial pos="0.00137 0.082605 -0.055032" quat="0.995197 0.0933804 -0.00432275 -0.0290522" mass="1.07578" diaginertia="0.00850138 0.00822984 0.000892776"/>
+          <joint name="FL_HIP_PITCH_Joint" pos="0 0 0" axis="0 1 0" range="-1.2217 4.3633" actuatorfrcrange="-30 30"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.75294 0.75294 0.75294 1" mesh="FL_HIP_PITCH_Link"/>
+          <geom size="0.019 0.09" pos="0 0.105 -0.163" type="cylinder" rgba="0.75294 0.75294 0.75294 1"/>
+          <body name="FL_KNEE_Link" pos="0 0.105 -0.22">
+            <inertial pos="0.000239 0.000337 -0.132133" quat="0.999997 0.00116581 0.00198653 -0.000171299" mass="0.354513" diaginertia="0.00198603 0.00193901 0.000223963"/>
+            <joint name="FL_KNEE_Joint" pos="0 0 0" axis="0 1 0" range="-2.618 2.618" actuatorfrcrange="-30 30"/>
+            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.75294 0.75294 0.75294 1" mesh="FL_KNEE_Link"/>
+            <geom size="0.01 0.059" pos="0 0 -0.123" type="cylinder" rgba="0.75294 0.75294 0.75294 1"/>
+            <body name="FL_FOOT_Link" pos="-0.00054708 0 -0.22117">
+              <inertial pos="4e-06 0.000101 -0.006707" quat="0.5 0.5 0.5 0.5" mass="0.030329" diaginertia="7e-06 7e-06 4e-06"/>
+              <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.29804 0.29804 0.29804 1" mesh="FL_FOOT_Link"/>
+              <geom size="0.023 0.017" quat="0.707388 0.706825 0 0" type="cylinder" rgba="0.29804 0.29804 0.29804 1"/>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="FR_HIP_ROLL_Link" pos="0.175 -0.06 0">
+        <inertial pos="-0.003639 0.011311 -9.9e-05" quat="-0.145839 0.677117 0.22212 0.686226" mass="0.493283" diaginertia="0.000327202 0.000311 0.000262798"/>
+        <joint name="FR_HIP_ROLL_Joint" pos="0 0 0" axis="1 0 0" range="-0.5236 0.5236" actuatorfrcrange="-15 15"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.75294 0.75294 0.75294 1" mesh="FR_HIP_ROLL_Link"/>
+        <geom size="0.03 0.045" quat="0.499998 -0.500002 0.5 0.5" type="cylinder" rgba="0.75294 0.75294 0.75294 1"/>
+        <body name="FR_HIP_PITCH_Link">
+          <inertial pos="-0.001233 -0.082605 -0.055002" quat="0.994973 -0.093306 0.00114079 -0.0363556" mass="1.07577" diaginertia="0.00849804 0.00822608 0.000894877"/>
+          <joint name="FR_HIP_PITCH_Joint" pos="0 0 0" axis="0 1 0" range="-1.2217 4.3633" actuatorfrcrange="-30 30"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.75294 0.75294 0.75294 1" mesh="FR_HIP_PITCH_Link"/>
+          <geom size="0.019 0.09" pos="0 -0.105 -0.163" type="cylinder" rgba="0.75294 0.75294 0.75294 1"/>
+          <body name="FR_KNEE_Link" pos="0 -0.105 -0.22">
+            <inertial pos="0.000239 -0.000339 -0.132133" quat="0.999997 -0.00116581 0.00198653 0.000171299" mass="0.354522" diaginertia="0.00198603 0.00193901 0.000223963"/>
+            <joint name="FR_KNEE_Joint" pos="0 0 0" axis="0 1 0" range="-2.618 2.618" actuatorfrcrange="-30 30"/>
+            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.75294 0.75294 0.75294 1" mesh="FR_KNEE_Link"/>
+            <geom size="0.01 0.059" pos="0 0 -0.123" type="cylinder" rgba="0.75294 0.75294 0.75294 1"/>
+            <body name="FR_FOOT_Link" pos="-0.00054708 0 -0.22117">
+              <inertial pos="4e-06 -0.000101 -0.006707" quat="0.5 0.5 0.5 0.5" mass="0.030329" diaginertia="7e-06 7e-06 4e-06"/>
+              <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.29804 0.29804 0.29804 1" mesh="FR_FOOT_Link"/>
+              <geom size="0.023 0.017" quat="0.707388 0.706825 0 0" type="cylinder" rgba="0.29804 0.29804 0.29804 1"/>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="RL_HIP_ROLL_Link" pos="-0.175 0.06 0">
+        <inertial pos="0.002742 -0.002017 0.000109" quat="0.0421802 0.713569 0.044226 0.697914" mass="0.502258" diaginertia="0.000325268 0.000308754 0.000279978"/>
+        <joint name="RL_HIP_ROLL_Joint" pos="0 0 0" axis="1 0 0" range="-1.5708 1.5708" actuatorfrcrange="-30 30"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.75294 0.75294 0.75294 1" mesh="RL_HIP_ROLL_Link"/>
+        <geom size="0.03 0.03" quat="0.499998 -0.500002 0.5 0.5" type="cylinder" rgba="0.75294 0.75294 0.75294 1"/>
+        <body name="RL_HIP_PITCH_Link">
+          <inertial pos="-0.003459 0.019061 -0.086383" quat="0.99264 0.057756 0.0213599 0.104273" mass="0.997611" diaginertia="0.00490764 0.00472997 0.00112638"/>
+          <joint name="RL_HIP_PITCH_Joint" pos="0 0 0" axis="0 1 0" range="0 3.1416" actuatorfrcrange="-30 30"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.75294 0.75294 0.75294 1" mesh="RL_HIP_PITCH_Link"/>
+          <geom size="0.03 0.065" pos="-0.005 0.04 -0.1" type="cylinder" rgba="0.75294 0.75294 0.75294 1"/>
+          <body name="RL_KNEE_Link" pos="0 0.0521 -0.245">
+            <inertial pos="-0.002168 -0.016199 -0.171311" quat="0.730445 -0.0228975 0.00632484 0.682559" mass="0.791166" diaginertia="0.0077442 0.00769631 0.000415496"/>
+            <joint name="RL_KNEE_Joint" pos="0 0 0" axis="0 1 0" range="-2.618 -0.17453" actuatorfrcrange="-30 30"/>
+            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.75294 0.75294 0.75294 1" mesh="RL_KNEE_Link"/>
+            <geom size="0.012 0.06" pos="0 -0.012 -0.02" type="cylinder" rgba="0.75294 0.75294 0.75294 1"/>
+            <geom size="0.04 0.025" pos="0 -0.03 -0.245" quat="0.707388 0.706825 0 0" type="cylinder" rgba="0.75294 0.75294 0.75294 1"/>
+            <body name="RL_FOOT_Link" pos="0 0.0075 -0.245">
+              <inertial pos="-3e-06 0.02069 1.6e-05" quat="0.707107 0 0 0.707107" mass="0.301187" diaginertia="0.000922 0.000503 0.000503"/>
+              <joint name="RL_FOOT_Joint" pos="0 0 0" axis="0 1 0" range="-99999999 99999999" actuatorfrcrange="-15 15"/>
+              <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.75294 0.75294 0.75294 1" mesh="RL_FOOT_Link"/>
+              <geom size="0.07 0.017" pos="0 0.02 0" quat="0.707388 0.706825 0 0" type="cylinder" rgba="0.75294 0.75294 0.75294 1"/>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="RR_HIP_ROLL_Link" pos="-0.175 -0.06 0">
+        <inertial pos="0.002742 0.002017 -0.000109" quat="0.044226 0.697914 0.0421802 0.713569" mass="0.502258" diaginertia="0.000325268 0.000308754 0.000279978"/>
+        <joint name="RR_HIP_ROLL_Joint" pos="0 0 0" axis="1 0 0" range="-1.5708 1.5708" actuatorfrcrange="-30 30"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="RR_HIP_ROLL_Link"/>
+        <geom size="0.03 0.03" quat="0.499998 -0.500002 0.5 0.5" type="cylinder" rgba="1 1 1 1"/>
+        <body name="RR_HIP_PITCH_Link">
+          <inertial pos="-0.003426 -0.019061 -0.08644" quat="0.990226 -0.0586111 0.0197498 -0.12501" mass="0.9976" diaginertia="0.00490199 0.00471787 0.00112614"/>
+          <joint name="RR_HIP_PITCH_Joint" pos="0 0 0" axis="0 1 0" range="0 3.1416" actuatorfrcrange="-30 30"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.75294 0.75294 0.75294 1" mesh="RR_HIP_PITCH_Link"/>
+          <geom size="0.03 0.065" pos="-0.005 -0.04 -0.1" type="cylinder" rgba="0.75294 0.75294 0.75294 1"/>
+          <body name="RR_KNEE_Link" pos="0 -0.0521 -0.245">
+            <inertial pos="-0.002049 0.016208 -0.171442" quat="0.661379 0.00527896 -0.0233122 0.749671" mass="0.790652" diaginertia="0.0077246 0.00767605 0.000415344"/>
+            <joint name="RR_KNEE_Joint" pos="0 0 0" axis="0 1 0" range="-2.618 -0.17453" actuatorfrcrange="-30 30"/>
+            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.75294 0.75294 0.75294 1" mesh="RR_KNEE_Link"/>
+            <geom size="0.012 0.06" pos="0 0.012 -0.02" type="cylinder" rgba="0.75294 0.75294 0.75294 1"/>
+            <geom size="0.04 0.025" pos="0 0.03 -0.245" quat="0.707388 0.706825 0 0" type="cylinder" rgba="0.75294 0.75294 0.75294 1"/>
+            <body name="RR_FOOT_Link" pos="0 -0.0075 -0.245">
+              <inertial pos="3e-06 -0.02069 1.6e-05" quat="0.707107 0 0 0.707107" mass="0.301187" diaginertia="0.000922 0.000503 0.000503"/>
+              <joint name="RR_FOOT_Joint" pos="0 0 0" axis="0 1 0" range="-99999999 99999999" actuatorfrcrange="-15 15"/>
+              <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.75294 0.75294 0.75294 1" mesh="RR_FOOT_Link"/>
+              <geom size="0.07 0.017" pos="0 -0.02 0" quat="0.707105 0.707108 0 0" type="cylinder" rgba="0.75294 0.75294 0.75294 1"/>
+            </body>
+          </body>
+        </body>
+      </body>
+      <site name="imu" pos="0 0 0" />
+    </body>
+  </worldbody>
+
+  <actuator>
+    <motor name="FL_HIP_ROLL_Joint_Actuator" joint="FL_HIP_ROLL_Joint" ctrlrange="-30 30" forcelimited="true" forcerange="-30 30" />
+    <motor name="FL_HIP_PITCH_Joint_Actuator" joint="FL_HIP_PITCH_Joint" ctrlrange="-30 30" forcelimited="true" forcerange="-30 30" />
+    <motor name="FL_KNEE_Joint_Actuator" joint="FL_KNEE_Joint" ctrlrange="-30 30" forcelimited="true" forcerange="-30 30" />
+
+    <motor name="FR_HIP_ROLL_Joint_Actuator" joint="FR_HIP_ROLL_Joint" ctrlrange="-30 30" forcelimited="true" forcerange="-30 30" />
+    <motor name="FR_HIP_PITCH_Joint_Actuator" joint="FR_HIP_PITCH_Joint" ctrlrange="-30 30" forcelimited="true" forcerange="-30 30" />
+    <motor name="FR_KNEE_Joint_Actuator" joint="FR_KNEE_Joint" ctrlrange="-30 30" forcelimited="true" forcerange="-30 30" />
+
+    <motor name="RL_HIP_ROLL_Joint_Actuator" joint="RL_HIP_ROLL_Joint" ctrlrange="-30 30" forcelimited="true" forcerange="-30 30" />
+    <motor name="RL_HIP_PITCH_Joint_Actuator" joint="RL_HIP_PITCH_Joint" ctrlrange="-30 30" forcelimited="true" forcerange="-30 30" />
+    <motor name="RL_KNEE_Joint_Actuator" joint="RL_KNEE_Joint" ctrlrange="-30 30" forcelimited="true" forcerange="-30 30" />
+    <motor name="RL_FOOT_Joint_Actuator" joint="RL_FOOT_Joint" ctrlrange="-14 14" forcelimited="true" forcerange="-14 14" />
+
+    <motor name="RR_HIP_ROLL_Joint_Actuator" joint="RR_HIP_ROLL_Joint" ctrlrange="-30 30" forcelimited="true" forcerange="-30 30" />
+    <motor name="RR_HIP_PITCH_Joint_Actuator" joint="RR_HIP_PITCH_Joint" ctrlrange="-30 30" forcelimited="true" forcerange="-30 30" />
+    <motor name="RR_KNEE_Joint_Actuator" joint="RR_KNEE_Joint" ctrlrange="-30 30" forcelimited="true" forcerange="-30 30" />
+    <motor name="RR_FOOT_Joint_Actuator" joint="RR_FOOT_Joint" ctrlrange="-14 14" forcelimited="true" forcerange="-14 14" />
+  </actuator>
+
+  <sensor>
+    <jointpos name="FL_HIP_ROLL_Joint_pos" joint="FL_HIP_ROLL_Joint" noise = "0.0" />
+    <jointpos name="FL_HIP_PITCH_Joint_pos" joint="FL_HIP_PITCH_Joint" noise = "0.0" />
+    <jointpos name="FL_KNEE_Joint_pos" joint="FL_KNEE_Joint" noise = "0.0" />
+    <jointpos name="FR_HIP_ROLL_Joint_pos" joint="FR_HIP_ROLL_Joint" noise = "0.0" />
+    <jointpos name="FR_HIP_PITCH_Joint_pos" joint="FR_HIP_PITCH_Joint" noise = "0.0" />
+    <jointpos name="FR_KNEE_Joint_pos" joint="FR_KNEE_Joint" noise = "0.0" />
+    <jointpos name="RL_HIP_ROLL_Joint_pos" joint="RL_HIP_ROLL_Joint" noise = "0.0" />
+    <jointpos name="RL_HIP_PITCH_Joint_pos" joint="RL_HIP_PITCH_Joint" noise = "0.0" />
+    <jointpos name="RL_KNEE_Joint_pos" joint="RL_KNEE_Joint" noise = "0.0" />
+    <jointpos name="RL_FOOT_Joint_pos" joint="RL_FOOT_Joint" noise = "0.0" />
+    <jointpos name="RR_HIP_ROLL_Joint_pos" joint="RR_HIP_ROLL_Joint" noise = "0.0" />
+    <jointpos name="RR_HIP_PITCH_Joint_pos" joint="RR_HIP_PITCH_Joint" noise = "0.0" />
+    <jointpos name="RR_KNEE_Joint_pos" joint="RR_KNEE_Joint" noise = "0.0" />
+    <jointpos name="RR_FOOT_Joint_pos" joint="RR_FOOT_Joint" noise = "0.0" />
+
+    <jointvel name="FL_HIP_ROLL_Joint_vel" joint="FL_HIP_ROLL_Joint" noise = "0.0" />
+    <jointvel name="FL_HIP_PITCH_Joint_vel" joint="FL_HIP_PITCH_Joint" noise = "0.0" />
+    <jointvel name="FL_KNEE_Joint_vel" joint="FL_KNEE_Joint" noise = "0.0" />
+    <jointvel name="FR_HIP_ROLL_Joint_vel" joint="FR_HIP_ROLL_Joint" noise = "0.0" />
+    <jointvel name="FR_HIP_PITCH_Joint_vel" joint="FR_HIP_PITCH_Joint" noise = "0.0" />
+    <jointvel name="FR_KNEE_Joint_vel" joint="FR_KNEE_Joint" noise = "0.0" />
+    <jointvel name="RL_HIP_ROLL_Joint_vel" joint="RL_HIP_ROLL_Joint" noise = "0.0" />
+    <jointvel name="RL_HIP_PITCH_Joint_vel" joint="RL_HIP_PITCH_Joint" noise = "0.0" />
+    <jointvel name="RL_KNEE_Joint_vel" joint="RL_KNEE_Joint" noise = "0.0" />
+    <jointvel name="RL_FOOT_Joint_vel" joint="RL_FOOT_Joint" noise="0.0"/>
+    <jointvel name="RR_HIP_ROLL_Joint_vel" joint="RR_HIP_ROLL_Joint" noise = "0.0" />
+    <jointvel name="RR_HIP_PITCH_Joint_vel" joint="RR_HIP_PITCH_Joint" noise = "0.0" />
+    <jointvel name="RR_KNEE_Joint_vel" joint="RR_KNEE_Joint" noise = "0.0" />
+    <jointvel name="RR_FOOT_Joint_vel" joint="RR_FOOT_Joint" noise="0.0"/>
+
+    <actuatorfrc name="FL_HIP_ROLL_Joint_torque" actuator="FL_HIP_ROLL_Joint_Actuator" noise="0.0" />
+    <actuatorfrc name="FL_HIP_PITCH_Joint_torque" actuator="FL_HIP_PITCH_Joint_Actuator" noise="0.0" />
+    <actuatorfrc name="FL_KNEE_Joint_torque" actuator="FL_KNEE_Joint_Actuator" noise="0.0" />
+    <actuatorfrc name="FR_HIP_ROLL_Joint_torque" actuator="FR_HIP_ROLL_Joint_Actuator" noise="0.0" />
+    <actuatorfrc name="FR_HIP_PITCH_Joint_torque" actuator="FR_HIP_PITCH_Joint_Actuator" noise="0.0" />
+    <actuatorfrc name="FR_KNEE_Joint_torque" actuator="FR_KNEE_Joint_Actuator" noise="0.0" />
+    <actuatorfrc name="RL_HIP_ROLL_Joint_torque" actuator="RL_HIP_ROLL_Joint_Actuator" noise="0.0" />
+    <actuatorfrc name="RL_HIP_PITCH_Joint_torque" actuator="RL_HIP_PITCH_Joint_Actuator" noise="0.0" />
+    <actuatorfrc name="RL_KNEE_Joint_torque" actuator="RL_KNEE_Joint_Actuator" noise="0.0" />
+    <actuatorfrc name="RL_FOOT_Joint_torque" actuator="RL_FOOT_Joint_Actuator" />
+    <actuatorfrc name="RR_HIP_ROLL_Joint_torque" actuator="RR_HIP_ROLL_Joint_Actuator" noise="0.0" />
+    <actuatorfrc name="RR_HIP_PITCH_Joint_torque" actuator="RR_HIP_PITCH_Joint_Actuator" noise="0.0" />
+    <actuatorfrc name="RR_KNEE_Joint_torque" actuator="RR_KNEE_Joint_Actuator" noise="0.0" />
+    <actuatorfrc name="RR_FOOT_Joint_torque" actuator="RR_FOOT_Joint_Actuator" noise="0.0" />
+
+    <framequat name="body-orientation" objtype="site" objname="imu" noise="0"/>
+    <gyro name="body-angular-velocity" site="imu" noise="0.001"/>
+    <framepos name="body-linear-pos" objtype="site" objname="imu"/>
+    <velocimeter name="body-linear-vel" site="imu"/>
+    <accelerometer name="body-linear-acceleration" site="imu" noise="0.001"/>
+
+    <!-- <framepos name="frame_pos" objtype="site" objname="imu" />
+    <framelinvel name="frame_vel" objtype="site" objname="imu" /> -->
+  </sensor>
+
+</mujoco>

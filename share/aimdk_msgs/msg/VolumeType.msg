@@ -1,0 +1,7 @@
+uint8 value
+
+#本体扬声器
+uint8 SPEAKRE_BUILT_IN = 0x00
+
+#麦克风
+uint8 MIC = 0x10

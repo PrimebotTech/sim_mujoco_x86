@@ -1,0 +1,26 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from aimdk_msgs/msg/McLiftState.msg
+// generated code does not contain a copyright notice
+
+
+module aimdk_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "-----------------------------------------------------------------------------------" "\n"
+      "Lift detector detailed state" "\n"
+      "-----------------------------------------------------------------------------------")
+    struct McLiftState {
+      @verbatim (language="comment", text=
+        "Whether lift has been triggered and latched by the detector.")
+      boolean is_lifted;
+
+      @verbatim (language="comment", text=
+        "Lift probability after logit smoothing and sigmoid.")
+      float probability;
+
+      @verbatim (language="comment", text=
+        "Probability threshold used by the detector.")
+      float threshold;
+    };
+  };
+};

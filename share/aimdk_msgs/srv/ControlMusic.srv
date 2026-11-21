@@ -1,0 +1,38 @@
+CommonRequest request
+
+# control_type 枚举
+## 空类型
+int32 CONTROL_TYPE_NONE                   = 0
+## 播放
+int32 CONTROL_TYPE_PLAY                   = 1
+## 停止
+int32 CONTROL_TYPE_STOP                   = 2
+## 暂停
+int32 CONTROL_TYPE_PAUSE                  = 3
+## 恢复
+int32 CONTROL_TYPE_RESUME                 = 4
+## 上一首
+int32 CONTROL_TYPE_PREVIOUS               = 5
+## 下一首
+int32 CONTROL_TYPE_NEXT                   = 6
+## 调试
+int32 CONTROL_TYPE_DEBUG                  = 1000
+
+# 控制类型
+int32 control_type
+
+# 播放索引（从0开始），当 control_type == CONTROL_TYPE_PLAY 时有效，用于播放歌单中指定索引对应的歌曲。缺省时，默认播放当前歌曲（机器人播放器内部维护的一个索引）。
+int32 play_index
+
+# 是否禁用自动播放下一首，当 control_type == CONTROL_TYPE_PLAY 时有效，默认false（默认开启自动播放下一首功能）。
+bool no_auto_next
+
+# 调试参数
+string debug_args
+
+---
+
+CommonResponse response
+
+# 控制命令id
+uint64 control_command_id

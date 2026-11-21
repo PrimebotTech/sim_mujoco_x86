@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from aimdk_msgs/msg/AudioDeviceInfoList.msg
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/AudioDeviceInfo.idl"
+
+module aimdk_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "音频设备列表")
+    struct AudioDeviceInfoList {
+      sequence<aimdk_msgs::msg::AudioDeviceInfo> input_list;
+
+      sequence<aimdk_msgs::msg::AudioDeviceInfo> output_list;
+    };
+  };
+};

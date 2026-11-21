@@ -1,0 +1,57 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from aimdk_msgs/srv/MotorTest.srv
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/CommonRequest.idl"
+#include "aimdk_msgs/msg/CommonResponse.idl"
+
+module aimdk_msgs {
+  module srv {
+    struct MotorTest_Request {
+      aimdk_msgs::msg::CommonRequest request;
+
+      @verbatim (language="comment", text=
+        "从站序号 1 2  3")
+      uint8 dcu_type;
+
+      @verbatim (language="comment", text=
+        "can通信通道 1-左臂，左腿   2-右臂，右腿  3-头，腰")
+      uint8 can_channel;
+
+      @verbatim (language="comment", text=
+        "can通信id")
+      uint8 can_id;
+
+      @verbatim (language="comment", text=
+        "payload len")
+      uint8 payload_len;
+
+      @verbatim (language="comment", text=
+        "payload")
+      sequence<uint8> request_payload;
+    };
+    struct MotorTest_Response {
+      aimdk_msgs::msg::CommonResponse response;
+
+      @verbatim (language="comment", text=
+        "从站序号 1 2  3")
+      uint8 dcu_type;
+
+      @verbatim (language="comment", text=
+        "can通信通道 1-左臂，左腿   2-右臂，右腿  3-头，腰")
+      uint8 can_channel;
+
+      @verbatim (language="comment", text=
+        "can通信id")
+      uint8 can_id;
+
+      @verbatim (language="comment", text=
+        "payload len")
+      uint8 payload_len;
+
+      @verbatim (language="comment", text=
+        "payload")
+      sequence<uint8> response_payload;
+    };
+  };
+};

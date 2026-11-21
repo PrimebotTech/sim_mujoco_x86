@@ -1,0 +1,37 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from aimdk_msgs/srv/SetJointPower.srv
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/CommonRequest.idl"
+#include "aimdk_msgs/msg/CommonResponse.idl"
+
+module aimdk_msgs {
+  module srv {
+    module SetJointPower_Request_Constants {
+      @verbatim (language="comment", text=
+        "电机上电")
+      const uint8 POWER_ON = 1;
+      @verbatim (language="comment", text=
+        "电机下电")
+      const uint8 POWER_OFF = 2;
+    };
+    @verbatim (language="comment", text=
+      "Request")
+    struct SetJointPower_Request {
+      aimdk_msgs::msg::CommonRequest request;
+
+      @verbatim (language="comment", text=
+        "调用请求的模块名")
+      string input_source;
+
+      @verbatim (language="comment", text=
+        "命令")
+      uint8 command;
+    };
+    struct SetJointPower_Response {
+      @verbatim (language="comment", text=
+        "响应头")
+      aimdk_msgs::msg::CommonResponse header;
+    };
+  };
+};

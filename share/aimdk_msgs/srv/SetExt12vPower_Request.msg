@@ -1,0 +1,6 @@
+# 设置二开扩展接口 12V 电源
+CommonRequest request
+
+# true：上电，false：下电
+bool enable
+

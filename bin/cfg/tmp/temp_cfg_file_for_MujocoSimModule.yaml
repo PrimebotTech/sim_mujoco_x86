@@ -1,0 +1,26 @@
+gui_executor: gui_work_thread
+sim_executor: sim_work_thread
+simulation_model: /native_x86_workspace/everyweek_build_tag/sim_mujoco/sim_mujoco_x86/bin/..//configuration/robot/q1_t2d0/model_info/scene.xml
+robot_model: /native_x86_workspace/everyweek_build_tag/sim_mujoco/sim_mujoco_x86/bin/..//configuration/robot/q1_t2d0/model_info/default.yaml
+SubscriberManager:
+  subscriber_cfg_list:
+    - name: joint_command
+      topic: /aima/hal/joint/command
+      enable: true
+      executor: joint_command_subscriber_thread
+      wait_ready: true
+      print_interval: 1000
+PublisherManager:
+  publisher_cfg_list:
+    - name: imu_state
+      topic: /aima/hal/imu/state
+      enable: true
+      executor: imu_state_publisher_thread
+      frequency: 500
+      print_interval: 0
+    - name: joint_state
+      topic: /aima/hal/joint/state
+      enable: true
+      executor: joint_state_publisher_thread
+      frequency: 1000
+      print_interval: 0

@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from aimdk_msgs/msg/ServoStatus.msg
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/MessageHeader.idl"
+
+module aimdk_msgs {
+  module msg {
+    struct ServoStatus {
+      @verbatim (language="comment", text=
+        "消息头信息")
+      aimdk_msgs::msg::MessageHeader header;
+
+      @verbatim (language="comment", text=
+        "头部舵机反馈角度(当前没有反馈等于控制角度)")
+      float position;
+    };
+  };
+};

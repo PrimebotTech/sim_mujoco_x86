@@ -1,0 +1,35 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from aimdk_msgs/msg/JpegImage.msg
+// generated code does not contain a copyright notice
+
+#include "sensor_msgs/msg/CompressedImage.idl"
+
+module aimdk_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "相机元信息")
+    struct JpegImage {
+      string camera_id;
+
+      string device;
+
+      uint32 width;
+
+      uint32 height;
+
+      uint32 framerate;
+
+      @verbatim (language="comment", text=
+        "曝光值")
+      uint32 exposure;
+
+      @verbatim (language="comment", text=
+        "模拟增益")
+      uint32 gain;
+
+      @verbatim (language="comment", text=
+        "JPEG 图片数据")
+      sensor_msgs::msg::CompressedImage image;
+    };
+  };
+};

@@ -1,0 +1,9 @@
+CommonRequest request
+
+uint8 device
+
+uint8 PMU_SN = 0    # 目标设备是PMU
+uint8 LORA_SN = 1   # 目标设备是LORA
+
+uint8[19] serial_number
+

@@ -1,0 +1,26 @@
+<mujoco model="qiyuan scene q1_p0_finger">
+  <include file="q1_p0_mc.xml"/>
+
+  <statistic center="0 0 0.6" extent="1.3"/>
+
+  <visual>
+    <headlight diffuse="0.5 0.5 0.5" ambient="0.2 0.2 0.2" specular="0.9 0.9 0.9"/>
+    <!-- fog required: app enables mjRND_FOG; align with qd1_t2d0 haze -->
+    <rgba fog="0.15 0.25 0.35 1" haze="0.15 0.25 0.35 1"/>
+    <map fogstart="8" fogend="40" haze="0" force="0.1" zfar="50"/>
+    <global azimuth="200" elevation="-20" offwidth="2080" offheight="1170"/>
+  </visual>
+
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0 0 0" width="512" height="3072"/>
+    <texture type="2d" name="groundplane" builtin="checker" mark="edge"
+      rgb1="0.3 0.52 0.63" rgb2="0.3 0.52 0.63" markrgb="1 1 1" width="300" height="300"/>
+    <material name="groundplane" texture="groundplane" texuniform="true" texrepeat="5 5" reflectance="0.2"/>
+  </asset>
+
+  <worldbody>
+    <geom name="floor" size="0 0 0.01" type="plane" material="groundplane" contype="1" conaffinity="0" priority="1"
+      friction="1.0" condim="3"/>
+    <light diffuse=".5 .5 .5" pos="-3 -3 5" dir="3 3 -5" castshadow="true"/>
+  </worldbody>
+</mujoco>

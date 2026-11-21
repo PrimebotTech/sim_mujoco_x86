@@ -1,0 +1,1 @@
+/native_x86_workspace/everyweek_build_tag/sim_mujoco/sim_mujoco_x86/bin/..//configuration

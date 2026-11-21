@@ -1,0 +1,34 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from aimdk_msgs/srv/SetPmuSN.srv
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/CommonRequest.idl"
+#include "aimdk_msgs/msg/CommonResponse.idl"
+
+module aimdk_msgs {
+  module srv {
+    typedef uint8 uint8__19[19];
+    module SetPmuSN_Request_Constants {
+      @verbatim (language="comment", text=
+        "目标设备是PMU")
+      const uint8 PMU_SN = 0;
+      @verbatim (language="comment", text=
+        "目标设备是LORA")
+      const uint8 LORA_SN = 1;
+    };
+    struct SetPmuSN_Request {
+      aimdk_msgs::msg::CommonRequest request;
+
+      uint8 device;
+
+      uint8__19 serial_number;
+    };
+    struct SetPmuSN_Response {
+      aimdk_msgs::msg::CommonResponse response;
+
+      @verbatim (language="comment", text=
+        "设置是否成功")
+      uint16 result;
+    };
+  };
+};

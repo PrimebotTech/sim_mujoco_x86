@@ -1,0 +1,8 @@
+
+
+CommonResponse response
+
+JointState[] head_joints
+JointState[] arm_joints
+JointState[] waist_joints
+JointState[] leg_joints

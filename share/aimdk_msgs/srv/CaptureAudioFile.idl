@@ -1,0 +1,44 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from aimdk_msgs/srv/CaptureAudioFile.srv
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/AudioFile.idl"
+#include "aimdk_msgs/msg/CommonRequest.idl"
+#include "aimdk_msgs/msg/CommonResponse.idl"
+
+module aimdk_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "----------------------------------------------------" "\n"
+      "request")
+    struct CaptureAudioFile_Request {
+      @verbatim (language="comment", text=
+        "请求头")
+      aimdk_msgs::msg::CommonRequest request;
+
+      @verbatim (language="comment", text=
+        "文件信息")
+      aimdk_msgs::msg::AudioFile file;
+
+      @verbatim (language="comment", text=
+        "可选项，文件录制时长" "\n"
+        "如未设置时长，默认一直录音，调用StopCaptureAudioFile或切换内外置麦时停止录音")
+      uint32 duration;
+    };
+    struct CaptureAudioFile_Response {
+      @verbatim (language="comment", text=
+        "----------------------------------------------------" "\n"
+        "response" "\n"
+        "响应头")
+      aimdk_msgs::msg::CommonResponse response;
+
+      @verbatim (language="comment", text=
+        "必要项，表明当前麦克风类型")
+      uint32 mic_source;
+
+      @verbatim (language="comment", text=
+        "文件信息")
+      aimdk_msgs::msg::AudioFile file;
+    };
+  };
+};

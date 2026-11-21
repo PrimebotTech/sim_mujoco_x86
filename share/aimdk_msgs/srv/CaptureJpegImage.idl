@@ -1,0 +1,39 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from aimdk_msgs/srv/CaptureJpegImage.srv
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/CommonRequest.idl"
+#include "aimdk_msgs/msg/CommonResponse.idl"
+#include "aimdk_msgs/msg/JpegImage.idl"
+
+module aimdk_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "----------------------------------------------------" "\n"
+      "request")
+    struct CaptureJpegImage_Request {
+      @verbatim (language="comment", text=
+        "请求头")
+      aimdk_msgs::msg::CommonRequest request;
+
+      @verbatim (language="comment", text=
+        "相机 ID")
+      string camera_id;
+
+      @verbatim (language="comment", text=
+        "可选项，等待新帧的超时时间，单位 ms；为 0 时使用服务端默认值")
+      uint32 timeout_ms;
+    };
+    struct CaptureJpegImage_Response {
+      @verbatim (language="comment", text=
+        "----------------------------------------------------" "\n"
+        "response" "\n"
+        "响应头")
+      aimdk_msgs::msg::CommonResponse response;
+
+      @verbatim (language="comment", text=
+        "JPEG 图片数据")
+      aimdk_msgs::msg::JpegImage jpeg;
+    };
+  };
+};

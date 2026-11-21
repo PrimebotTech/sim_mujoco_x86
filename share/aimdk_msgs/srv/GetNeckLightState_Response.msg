@@ -1,0 +1,10 @@
+
+
+
+# 响应头
+CommonResponse header
+
+# 开关: true开, false关
+bool enable   
+# 亮度: 0-100 百分比   
+uint8 brightness  

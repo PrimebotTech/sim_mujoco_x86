@@ -1,0 +1,32 @@
+# --------------------------------------------------------------------------------------------------------------
+# hal_rgbd TOF 热切换接口
+# 用于整机进入/退出低功耗或充电状态时，热关闭/热启动 TOF 相机
+# --------------------------------------------------------------------------------------------------------------
+
+# 请求头
+CommonRequest request
+
+# 目标相机掩码；0 表示操作全部 5 路 TOF
+uint32 camera_mask
+
+uint32 CAMERA_ALL   = 0x00   # 全部 5 路 TOF（默认）
+uint32 CAMERA_TOF_1 = 0x01
+uint32 CAMERA_TOF_2 = 0x02
+uint32 CAMERA_TOF_3 = 0x04
+uint32 CAMERA_TOF_4 = 0x08
+uint32 CAMERA_TOF_5 = 0x10
+
+# 操作类型：进入省电相关状态 → 热关闭 TOF；退出省电相关状态 → 热启动 TOF
+uint8 trigger_type
+
+uint8 ENTER_POWER_SAVE_MODE = 0   # 热关闭 TOF
+uint8 EXIT_POWER_SAVE_MODE  = 1   # 热启动 TOF
+
+# 触发原因（低功耗与充电对 TOF 行为相同，仅用于日志与问题定位）
+uint8 trigger_reason
+
+uint8 TRIGGER_UNKNOWN    = 0
+uint8 TRIGGER_LOW_POWER  = 1   # 进入低功耗
+uint8 TRIGGER_CHARGING   = 2   # 进入充电
+uint8 TRIGGER_NORMAL     = 3   # 退出省电状态，恢复正常工作
+

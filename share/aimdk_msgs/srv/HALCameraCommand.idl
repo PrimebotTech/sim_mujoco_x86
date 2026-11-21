@@ -1,0 +1,41 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from aimdk_msgs/srv/HALCameraCommand.srv
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/CommonRequest.idl"
+#include "aimdk_msgs/msg/CommonResponse.idl"
+
+module aimdk_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "request")
+    struct HALCameraCommand_Request {
+      aimdk_msgs::msg::CommonRequest request;
+
+      @verbatim (language="comment", text=
+        "命令名（点分层级），例如：" "\n"
+        "  stream.enable    → 开启某路 NV12 发布" "\n"
+        "  stream.disable   → 关闭某路 NV12 发布" "\n"
+        "  （预留：set.fps、set.resolution、snapshot.trigger ...）")
+      string command;
+
+      @verbatim (language="comment", text=
+        "KV 参数列表（param_keys[i] 对应 param_values[i]）" "\n"
+        "示例 stream.enable: keys=[\"topic\"], values=[\"/aima/hal/camera/bgr_camera_l/nv12\"]")
+      sequence<string> param_keys;
+
+      sequence<string> param_values;
+    };
+    struct HALCameraCommand_Response {
+      @verbatim (language="comment", text=
+        "response")
+      aimdk_msgs::msg::CommonResponse response;
+
+      @verbatim (language="comment", text=
+        "可选返回值（供需要回传数据的命令使用，如 get.fps 返回当前帧率）")
+      sequence<string> result_keys;
+
+      sequence<string> result_values;
+    };
+  };
+};

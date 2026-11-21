@@ -1,0 +1,30 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from aimdk_msgs/msg/JointMitParams.msg
+// generated code does not contain a copyright notice
+
+
+module aimdk_msgs {
+  module msg {
+    struct JointMitParams {
+      int16 pos_max;
+
+      int16 pos_min;
+
+      int16 vel_max;
+
+      int16 vel_min;
+
+      int16 tor_max;
+
+      int16 tor_min;
+
+      int16 kp_max;
+
+      int16 kp_min;
+
+      int16 kd_max;
+
+      int16 kd_min;
+    };
+  };
+};

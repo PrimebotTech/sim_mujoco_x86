@@ -1,0 +1,36 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from aimdk_msgs/srv/FluxRecordCommand.srv
+// generated code does not contain a copyright notice
+
+
+module aimdk_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "FluxRecordCommand.srv — flux 录制控制 RPC 服务")
+    struct FluxRecordCommand_Request {
+      @verbatim (language="comment", text=
+        "request" "\n"
+        "\"record.start\" or \"record.stop\"")
+      string command;
+
+      @verbatim (language="comment", text=
+        "seconds, 0 = use config default")
+      int32 duration;
+    };
+    @verbatim (language="comment", text=
+      "response")
+    struct FluxRecordCommand_Response {
+      @verbatim (language="comment", text=
+        "0=success, non-zero=fail")
+      int32 status;
+
+      @verbatim (language="comment", text=
+        "error reason code (0 when success)")
+      int32 reason;
+
+      @verbatim (language="comment", text=
+        "human-readable status/error message")
+      string message;
+    };
+  };
+};

@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from hds_msgs/msg/ExceptionChannel.msg
+// generated code does not contain a copyright notice
+
+#include "hds_msgs/msg/Exception.idl"
+
+module hds_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "ms时间辍")
+    struct ExceptionChannel {
+      uint64 timestamp;
+
+      @verbatim (language="comment", text=
+        "异常类型")
+      sequence<hds_msgs::msg::Exception> exception_list;
+    };
+  };
+};

@@ -1,0 +1,30 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from aimdk_msgs/msg/ModuleResourceInfo.msg
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/ModuleChannelInfo.idl"
+#include "aimdk_msgs/msg/ModuleRpcInfo.idl"
+
+module aimdk_msgs {
+  module msg {
+    struct ModuleResourceInfo {
+      string module_name;
+
+      @verbatim (language="comment", text=
+        "模块rpc客户端信息")
+      sequence<aimdk_msgs::msg::ModuleRpcInfo> rpc_clients;
+
+      @verbatim (language="comment", text=
+        "模块service channel信息")
+      sequence<aimdk_msgs::msg::ModuleRpcInfo> rpc_services;
+
+      @verbatim (language="comment", text=
+        "模块pub channel信息")
+      sequence<aimdk_msgs::msg::ModuleChannelInfo> pub_channels;
+
+      @verbatim (language="comment", text=
+        "模块sub channel信息")
+      sequence<aimdk_msgs::msg::ModuleChannelInfo> sub_channels;
+    };
+  };
+};

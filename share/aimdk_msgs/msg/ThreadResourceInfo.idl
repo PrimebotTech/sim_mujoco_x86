@@ -1,0 +1,34 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from aimdk_msgs/msg/ThreadResourceInfo.msg
+// generated code does not contain a copyright notice
+
+
+module aimdk_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "线程ID")
+    struct ThreadResourceInfo {
+      uint64 thread_id;
+
+      @verbatim (language="comment", text=
+        "线程名称")
+      string thread_name;
+
+      @verbatim (language="comment", text=
+        "当前线程cpu使用率")
+      double cpu_usage_ratio;
+
+      @verbatim (language="comment", text=
+        "当前进程调度策略")
+      string cpu_sched_policy;
+
+      @verbatim (language="comment", text=
+        "当前进程调度优先级")
+      int32 cpu_sched_priority;
+
+      @verbatim (language="comment", text=
+        "当前进程绑定cpu")
+      sequence<int32> bounding_cpus;
+    };
+  };
+};

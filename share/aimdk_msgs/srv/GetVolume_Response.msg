@@ -1,0 +1,10 @@
+
+
+# ----------------------------------------------------
+# response
+
+# 响应头
+CommonResponse response
+
+# 当前音量（0~100）
+uint32 audio_volume

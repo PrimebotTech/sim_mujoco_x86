@@ -1,0 +1,20 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from aimdk_msgs/msg/SysInfo.msg
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/MessageHeader.idl"
+
+module aimdk_msgs {
+  module msg {
+    struct SysInfo {
+      @verbatim (language="comment", text=
+        "数据头")
+      aimdk_msgs::msg::MessageHeader header;
+
+      @verbatim (language="comment", text=
+        "ORIN 温度信息" "\n"
+        "cpu温度")
+      float soc1_cpu_temperature;
+    };
+  };
+};

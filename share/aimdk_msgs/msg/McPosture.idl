@@ -1,0 +1,26 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from aimdk_msgs/msg/McPosture.msg
+// generated code does not contain a copyright notice
+
+
+module aimdk_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "-----------------------------------------------------------------------------------" "\n"
+      "机器人姿态信息" "\n"
+      "-----------------------------------------------------------------------------------")
+    struct McPosture {
+      @verbatim (language="comment", text=
+        "横滚角")
+      double roll;
+
+      @verbatim (language="comment", text=
+        "俯仰角")
+      double pitch;
+
+      @verbatim (language="comment", text=
+        "航向角")
+      double yaw;
+    };
+  };
+};

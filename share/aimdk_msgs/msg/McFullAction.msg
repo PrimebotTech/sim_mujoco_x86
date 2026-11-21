@@ -1,0 +1,35 @@
+# 定义枚举字段
+int32 value
+
+# 被动模式
+int32 PASSIVE_DEFAULT = 1
+
+# 四足切换两足形态
+int32 QUADRUPED_TO_BIPED = 2
+
+# 两足切换四足形态
+int32 BIPED_TO_QUADRUPED = 3
+
+# 倒地四足站起
+int32 QUADRUPED_RECOVERY = 100
+
+# 四足站立模式
+int32 QUADRUPED_STAND_DEFAULT = 101
+
+# 四足行走/奔跑模式
+int32 QUADRUPED_LOCOMOTION_DEFAULT = 102
+
+# 四足越障行走模式
+int32 QUADRUPED_LOCOMOTION_TERRAIN = 103
+
+# 倒地两足站起
+int32 BIPED_RECOVERY = 200
+
+# 两足站立模式
+int32 BIPED_STAND_DEFAULT = 201
+
+# 两足行走/奔跑模式
+int32 BIPED_LOCOMOTION_DEFAULT = 202
+
+# 两足越障行走模式
+int32 BIPED_LOCOMOTION_TERRAIN = 203

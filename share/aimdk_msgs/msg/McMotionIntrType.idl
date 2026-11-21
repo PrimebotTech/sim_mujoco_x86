@@ -1,0 +1,25 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from aimdk_msgs/msg/McMotionIntrType.msg
+// generated code does not contain a copyright notice
+
+
+module aimdk_msgs {
+  module msg {
+    module McMotionIntrType_Constants {
+      @verbatim (language="comment", text=
+        "不支持打断")
+      const int32 INTR_NO = 0;
+      @verbatim (language="comment", text=
+        "自由打断，任意时刻")
+      const int32 INTR_FREE = 1;
+      @verbatim (language="comment", text=
+        "断点打断")
+      const int32 INTR_BREAKPOINT = 2;
+    };
+    @verbatim (language="comment", text=
+      "定义枚举字段")
+    struct McMotionIntrType {
+      int32 value;
+    };
+  };
+};

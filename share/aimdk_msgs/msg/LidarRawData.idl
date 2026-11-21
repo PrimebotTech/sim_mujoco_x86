@@ -1,0 +1,32 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from aimdk_msgs/msg/LidarRawData.msg
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/MessageHeader.idl"
+
+module aimdk_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "--------------------------------------------------------------------------------------------------------------" "\n"
+      "机器人激光雷达原始数据 (Raw packets from LiDAR sensor)" "\n"
+      "--------------------------------------------------------------------------------------------------------------" "\n"
+      "头部信息：时间戳、坐标系、序列号等")
+    struct LidarRawData {
+      aimdk_msgs::msg::MessageHeader header;
+
+      @verbatim (language="comment", text=
+        "MSOP (Measurement Data Packets):" "\n"
+        "  - 含点云量测数据原始字节" "\n"
+        "  - 通常为设备按固定包长度输出的连续数据" "\n"
+        "  - 不做解析，保持原始二进制序列")
+      sequence<uint8> msop_data;
+
+      @verbatim (language="comment", text=
+        "DIFOP (Device Information Packets):" "\n"
+        "  - 设备状态、校准、雷达内部配置等信息" "\n"
+        "  - 一般频率低于 MSOP" "\n"
+        "  - 解析可用于标定/雷达健康监测")
+      sequence<uint8> difop_data;
+    };
+  };
+};

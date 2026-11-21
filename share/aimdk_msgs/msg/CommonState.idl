@@ -1,0 +1,142 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from aimdk_msgs/msg/CommonState.msg
+// generated code does not contain a copyright notice
+
+
+module aimdk_msgs {
+  module msg {
+    module CommonState_Constants {
+      @verbatim (language="comment", text=
+        "未知")
+      const int32 UNKNOWN = 0;
+      @verbatim (language="comment", text=
+        "成功")
+      const int32 SUCCESS = 1;
+      @verbatim (language="comment", text=
+        "失败")
+      const int32 FAILURE = 2;
+      @verbatim (language="comment", text=
+        "中止")
+      const int32 ABORTED = 3;
+      @verbatim (language="comment", text=
+        "超时")
+      const int32 TIMEOUT = 4;
+      @verbatim (language="comment", text=
+        "无效")
+      const int32 INVALID = 5;
+      @verbatim (language="comment", text=
+        "手动")
+      const int32 IN_MANUAL = 6;
+      @verbatim (language="comment", text=
+        "未就绪")
+      const int32 NOT_READY = 100;
+      @verbatim (language="comment", text=
+        "等待中")
+      const int32 PENDING = 200;
+      @verbatim (language="comment", text=
+        "已创建")
+      const int32 CREATED = 300;
+      @verbatim (language="comment", text=
+        "运行中")
+      const int32 RUNNING = 400;
+      @verbatim (language="comment", text=
+        "成功")
+      const uint32 REASON_SUCCESS = 0;
+      @verbatim (language="comment", text=
+        "开箱状态中")
+      const uint32 REASON_OPENBOX = 1;
+      @verbatim (language="comment", text=
+        "开机自检中")
+      const uint32 REASON_STARTUP_CHECK = 2;
+      @verbatim (language="comment", text=
+        "关机状态中")
+      const uint32 REASON_SHUTDOWN = 3;
+      @verbatim (language="comment", text=
+        "当前形态不支持")
+      const uint32 REASON_FROM = 4;
+      @verbatim (language="comment", text=
+        "低电量限制")
+      const uint32 REASON_LOW_BATTERY = 5;
+      @verbatim (language="comment", text=
+        "正在充电中")
+      const uint32 REASON_CHARGE = 6;
+      @verbatim (language="comment", text=
+        "动作不在白名单")
+      const uint32 REASON_NO_WHITELIST = 7;
+      @verbatim (language="comment", text=
+        "HDS故障")
+      const uint32 REASON_HDS = 8;
+      @verbatim (language="comment", text=
+        "当前模式不支持")
+      const uint32 REASON_ACTION = 9;
+      @verbatim (language="comment", text=
+        "前方有障碍物")
+      const uint32 REASON_OBSTACLE_FORWARD = 10;
+      @verbatim (language="comment", text=
+        "后方有障碍物")
+      const uint32 REASON_OBSTACLE_BACK = 11;
+      @verbatim (language="comment", text=
+        "左方有障碍物")
+      const uint32 REASON_OBSTACLE_LEFT = 12;
+      @verbatim (language="comment", text=
+        "右方有障碍物")
+      const uint32 REASON_OBSTACLE_RIGHT = 13;
+      @verbatim (language="comment", text=
+        "上方有障碍物")
+      const uint32 REASON_OBSTACLE_UP = 14;
+      @verbatim (language="comment", text=
+        "其他任务正在运行")
+      const uint32 REASON_TASK_RUNNING = 15;
+      @verbatim (language="comment", text=
+        "机器人已经是目标状态")
+      const uint32 REASON_TARGET_STATE = 16;
+      @verbatim (language="comment", text=
+        "未找到相关动作")
+      const uint32 REASON_NOT_FOUND = 17;
+      @verbatim (language="comment", text=
+        "无可用技能列表")
+      const uint32 REASON_NO_SKILL_LIST = 18;
+      @verbatim (language="comment", text=
+        "无法执行任务，机器人需要处于双足站立状态")
+      const uint32 REASON_FORM_MIS_MATCH = 19;
+      @verbatim (language="comment", text=
+        "当前动作不匹配，无法执行动画")
+      const uint32 REASON_ACTION_NOT_MATCH = 20;
+      @verbatim (language="comment", text=
+        "前动作在黑名单中，无法执行动画")
+      const uint32 REASON_ACTION_BLACKLISTED = 21;
+      @verbatim (language="comment", text=
+        "当前姿态下无法进行动作转移")
+      const uint32 REASON_NO_TRANSFER_PATH = 22;
+      @verbatim (language="comment", text=
+        "无符合条件的技能")
+      const uint32 REASON_NO_ELIGIBLE_SKILL = 23;
+      @verbatim (language="comment", text=
+        "室内模式下暂不支持该动作")
+      const uint32 REASON_INDOOR_WHOLE_BODY = 24;
+      @verbatim (language="comment", text=
+        "动作配置未就绪，无法执行动画")
+      const uint32 REASON_ENGINE_NOT_READY = 25;
+      @verbatim (language="comment", text=
+        "当前机型不支持该功能")
+      const uint32 REASON_NOT_SUPPORTED = 26;
+      @verbatim (language="comment", text=
+        "机器人正在起立，暂不能收起默认动作")
+      const uint32 REASON_STAND_UP_IN_PROGRESS = 27;
+      @verbatim (language="comment", text=
+        "当前动画不可打断")
+      const uint32 REASON_NOT_INTERRUPTIBLE = 28;
+      @verbatim (language="comment", text=
+        "当前动画 ID 无效，无法打断")
+      const uint32 REASON_INTERRUPT_INVALID = 29;
+      @verbatim (language="comment", text=
+        "当前状态不满足变形/动作执行条件")
+      const uint32 REASON_TRANSFORM_CONDITION = 30;
+    };
+    struct CommonState {
+      int32 value;
+
+      uint32 reason;
+    };
+  };
+};

@@ -1,0 +1,64 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from aimdk_msgs/srv/SetHalRgbdPowerSave.srv
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/CommonRequest.idl"
+#include "aimdk_msgs/msg/CommonResponse.idl"
+
+module aimdk_msgs {
+  module srv {
+    module SetHalRgbdPowerSave_Request_Constants {
+      @verbatim (language="comment", text=
+        "全部 5 路 TOF（默认）")
+      const uint32 CAMERA_ALL = 0;
+      const uint32 CAMERA_TOF_1 = 1;
+      const uint32 CAMERA_TOF_2 = 2;
+      const uint32 CAMERA_TOF_3 = 4;
+      const uint32 CAMERA_TOF_4 = 8;
+      const uint32 CAMERA_TOF_5 = 16;
+      @verbatim (language="comment", text=
+        "热关闭 TOF")
+      const uint8 ENTER_POWER_SAVE_MODE = 0;
+      @verbatim (language="comment", text=
+        "热启动 TOF")
+      const uint8 EXIT_POWER_SAVE_MODE = 1;
+      const uint8 TRIGGER_UNKNOWN = 0;
+      @verbatim (language="comment", text=
+        "进入低功耗")
+      const uint8 TRIGGER_LOW_POWER = 1;
+      @verbatim (language="comment", text=
+        "进入充电")
+      const uint8 TRIGGER_CHARGING = 2;
+      @verbatim (language="comment", text=
+        "退出省电状态，恢复正常工作")
+      const uint8 TRIGGER_NORMAL = 3;
+    };
+    @verbatim (language="comment", text=
+      "--------------------------------------------------------------------------------------------------------------" "\n"
+      "hal_rgbd TOF 热切换接口" "\n"
+      "用于整机进入/退出低功耗或充电状态时，热关闭/热启动 TOF 相机" "\n"
+      "--------------------------------------------------------------------------------------------------------------")
+    struct SetHalRgbdPowerSave_Request {
+      @verbatim (language="comment", text=
+        "请求头")
+      aimdk_msgs::msg::CommonRequest request;
+
+      @verbatim (language="comment", text=
+        "目标相机掩码；0 表示操作全部 5 路 TOF")
+      uint32 camera_mask;
+
+      @verbatim (language="comment", text=
+        "操作类型：进入省电相关状态 → 热关闭 TOF；退出省电相关状态 → 热启动 TOF")
+      uint8 trigger_type;
+
+      @verbatim (language="comment", text=
+        "触发原因（低功耗与充电对 TOF 行为相同，仅用于日志与问题定位）")
+      uint8 trigger_reason;
+    };
+    struct SetHalRgbdPowerSave_Response {
+      @verbatim (language="comment", text=
+        "响应头（结果以 status 为准）")
+      aimdk_msgs::msg::CommonResponse response;
+    };
+  };
+};

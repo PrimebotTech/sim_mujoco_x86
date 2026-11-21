@@ -1,0 +1,29 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from aimdk_msgs/srv/GetMcMotions.srv
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/CommonTaskResponse.idl"
+#include "aimdk_msgs/msg/McFormState.idl"
+#include "aimdk_msgs/msg/McMotion.idl"
+#include "aimdk_msgs/msg/RequestHeader.idl"
+
+module aimdk_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "请求头")
+    struct GetMcMotions_Request {
+      aimdk_msgs::msg::RequestHeader header;
+
+      @verbatim (language="comment", text=
+        "动作形态，通过指定形态过滤动作")
+      aimdk_msgs::msg::McFormState form_state;
+    };
+    struct GetMcMotions_Response {
+      aimdk_msgs::msg::CommonTaskResponse response;
+
+      @verbatim (language="comment", text=
+        "当前存在的动作列表")
+      sequence<aimdk_msgs::msg::McMotion> motion;
+    };
+  };
+};

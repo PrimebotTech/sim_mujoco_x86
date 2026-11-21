@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from aimdk_msgs/msg/ModuleRpcInfo.msg
+// generated code does not contain a copyright notice
+
+
+module aimdk_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "话题名")
+    struct ModuleRpcInfo {
+      string name;
+
+      @verbatim (language="comment", text=
+        "类型名")
+      string req_type;
+
+      string res_type;
+
+      sequence<string> backends;
+    };
+  };
+};

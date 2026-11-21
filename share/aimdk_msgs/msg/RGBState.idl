@@ -1,0 +1,35 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from aimdk_msgs/msg/RGBState.msg
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/MessageHeader.idl"
+
+module aimdk_msgs {
+  module msg {
+    struct RGBState {
+      @verbatim (language="comment", text=
+        "消息头信息")
+      aimdk_msgs::msg::MessageHeader header;
+
+      @verbatim (language="comment", text=
+        "当前显示模式")
+      uint8 display_mode;
+
+      @verbatim (language="comment", text=
+        "红色分量，自定义模式下生效")
+      uint8 r;
+
+      @verbatim (language="comment", text=
+        "绿色分量，自定义模式下生效")
+      uint8 g;
+
+      @verbatim (language="comment", text=
+        "蓝色分量，自定义模式下生效")
+      uint8 b;
+
+      @verbatim (language="comment", text=
+        "周期，自定义模式下生效。单位ms，0表示常亮，非0值表示点亮或者熄灭的保持时间")
+      uint16 period;
+    };
+  };
+};

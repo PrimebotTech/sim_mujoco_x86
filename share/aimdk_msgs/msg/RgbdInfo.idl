@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from aimdk_msgs/msg/RgbdInfo.msg
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/MessageHeader.idl"
+
+module aimdk_msgs {
+  module msg {
+    struct RgbdInfo {
+      aimdk_msgs::msg::MessageHeader header;
+
+      uint16 exposure;
+
+      float temperature;
+    };
+  };
+};

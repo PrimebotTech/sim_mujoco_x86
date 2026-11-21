@@ -1,0 +1,9 @@
+
+
+# 当前歌单
+MusicInfo[] music_list
+
+# 当前播放索引，从0开始
+int32 current_index
+
+CommonResponse response

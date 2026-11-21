@@ -1,0 +1,20 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from aimdk_msgs/msg/McCustomJointCommand.msg
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/JointCommand.idl"
+#include "aimdk_msgs/msg/MessageHeader.idl"
+
+module aimdk_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "消息头")
+    struct McCustomJointCommand {
+      aimdk_msgs::msg::MessageHeader header;
+
+      @verbatim (language="comment", text=
+        "上肢关节目标命令数组（mc内部自动按 name 匹配对应关节数据）")
+      sequence<aimdk_msgs::msg::JointCommand> joints;
+    };
+  };
+};

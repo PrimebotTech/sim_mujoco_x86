@@ -1,0 +1,29 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from aimdk_msgs/srv/SetMcMotionSeq.srv
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/CommonTaskResponse.idl"
+#include "aimdk_msgs/msg/RequestHeader.idl"
+
+module aimdk_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "此接口是播放动作序列接口(暂不使用)")
+    struct SetMcMotionSeq_Request {
+      @verbatim (language="comment", text=
+        "请求头")
+      aimdk_msgs::msg::RequestHeader header;
+
+      @verbatim (language="comment", text=
+        "动作序列")
+      sequence<string> motion_seq;
+
+      @verbatim (language="comment", text=
+        "打断")
+      boolean interrupt;
+    };
+    struct SetMcMotionSeq_Response {
+      aimdk_msgs::msg::CommonTaskResponse response;
+    };
+  };
+};

@@ -1,0 +1,38 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from aimdk_msgs/msg/AudioDeviceInfo.msg
+// generated code does not contain a copyright notice
+
+
+module aimdk_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "-----------------------------------------------------------------------------------" "\n"
+      "一块音频设备的信息" "\n"
+      "-----------------------------------------------------------------------------------")
+    struct AudioDeviceInfo {
+      @verbatim (language="comment", text=
+        "设备索引号" "\n"
+        "-1: auto mode")
+      int32 id;
+
+      @verbatim (language="comment", text=
+        "设备标志符" "\n"
+        "builtin_mic builtin_speaker")
+      string device_addr;
+
+      @verbatim (language="comment", text=
+        "设备类型" "\n"
+        "builtin bluetooth")
+      string device_type;
+
+      @verbatim (language="comment", text=
+        "设备名称" "\n"
+        "snd_card_name bluetooth")
+      string device_name;
+
+      @verbatim (language="comment", text=
+        "是否处于选中状态")
+      boolean is_sel;
+    };
+  };
+};

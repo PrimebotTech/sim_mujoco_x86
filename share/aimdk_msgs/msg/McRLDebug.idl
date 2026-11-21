@@ -1,0 +1,25 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from aimdk_msgs/msg/McRLDebug.msg
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/MessageHeader.idl"
+
+module aimdk_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "RL debug信息msg")
+    struct McRLDebug {
+      @verbatim (language="comment", text=
+        "消息头")
+      aimdk_msgs::msg::MessageHeader header;
+
+      @verbatim (language="comment", text=
+        "观测数组")
+      sequence<float> obs_vec;
+
+      @verbatim (language="comment", text=
+        "行为数组")
+      sequence<float> action_vec;
+    };
+  };
+};

@@ -1,0 +1,112 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from aimdk_msgs/msg/Bms.msg
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/MessageHeader.idl"
+
+module aimdk_msgs {
+  module msg {
+    struct Bms {
+      @verbatim (language="comment", text=
+        "数据头")
+      aimdk_msgs::msg::MessageHeader header;
+
+      @verbatim (language="comment", text=
+        "版本信息" "\n"
+        "厂家信息")
+      string manufacturer;
+
+      @verbatim (language="comment", text=
+        "序列号")
+      string serial_number;
+
+      @verbatim (language="comment", text=
+        "协议版本")
+      string protocol_version;
+
+      @verbatim (language="comment", text=
+        "硬件版本")
+      string hardware_version;
+
+      @verbatim (language="comment", text=
+        "软件版本")
+      string software_version;
+
+      @verbatim (language="comment", text=
+        "电源状态")
+      uint16 power_request;
+
+      @verbatim (language="comment", text=
+        "1-触发长按—关机请求" "\n"
+        "2-请求短按+长按关机请求" "\n"
+        "状态位和状态码")
+      uint32 status;
+
+      @verbatim (language="comment", text=
+        "bit 0:  充电标志" "\n"
+        "bit 1:  充电过流标志" "\n"
+        "bit 2:  放电标志" "\n"
+        "bit 3:  放电过流标志" "\n"
+        "bit 4:  电池短路标志" "\n"
+        "bit 5:  电芯电压过压标志" "\n"
+        "bit 6:  电芯电压欠压标志" "\n"
+        "bit 7:  电池总电压过压标志" "\n"
+        "bit 8:  电池总电压欠压标志" "\n"
+        "bit 9:  预留：电芯检测到开路标志" "\n"
+        "bit 10: 温感传感器检测到开路标志" "\n"
+        "bit 11: 电芯温度超过放电温度上限标志" "\n"
+        "bit 12: 电芯温度超过充电温度上限标志" "\n"
+        "bit 13: 电芯温度低于放电温度上限标志" "\n"
+        "bit 14: 电芯温度低于充电温度上限标志" "\n"
+        "bit 15: 电芯最大压差超过上限标志" "\n"
+        "bit 16: MOSFET禁止充电标志（表示真正故障禁用）" "\n"
+        "bit 17: MOSFET禁止放电标志（表示真正故障禁用）" "\n"
+        "bit 18: MOSFET此温度超过工作温度上限标志" "\n"
+        "bit 19: 电池包均衡线电阻超过上限标志" "\n"
+        "bit 20: 电池充满状态" "\n"
+        "bit 21: 电池包固件版本，0是老固件，1新固件" "\n"
+        "bit 22: 电池座key是否短接，0短接，1断开" "\n"
+        "bit 23: 电池包异常，0正常，1异常" "\n"
+        "bit 24: 预留：二级过温警告，0正常，1异常" "\n"
+        "bit 25: 有线充电器插入Key是否短接，1短接，0断开" "\n"
+        "bit 26: 无线充电器介入状态，0空闲，1介入" "\n"
+        "bit 27: 正常关机触发状态" "\n"
+        "bit 28: 长按关机触发状态" "\n"
+        "bit 29~31: 保留" "\n"
+        "电池包均衡线电阻（单位：mΩ）")
+      uint16 balance_line_resistance;
+
+      @verbatim (language="comment", text=
+        "电池包电压（单位：mV）")
+      uint32 voltage;
+
+      @verbatim (language="comment", text=
+        "电池包电流（单位：mA，充电为正，放电为负）")
+      int32 current;
+
+      @verbatim (language="comment", text=
+        "电池包输出功率（单位：mW）")
+      int32 power;
+
+      @verbatim (language="comment", text=
+        "电池包当前温度（单位：℃）")
+      float temperature;
+
+      @verbatim (language="comment", text=
+        "当前电池剩余容量（单位：mAh）")
+      uint32 remaining_capacity;
+
+      @verbatim (language="comment", text=
+        "当前电池剩余容量百分比（单位：％）")
+      uint8 remaining_capacity_percentage;
+
+      @verbatim (language="comment", text=
+        "当前电池包完整循环次数（单位：次）")
+      uint16 cycle_count;
+
+      @verbatim (language="comment", text=
+        "总充放电容量累计（单位：mAh）")
+      uint32 cycle_total_capacity;
+    };
+  };
+};

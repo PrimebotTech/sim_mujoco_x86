@@ -1,0 +1,64 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from aimdk_msgs/srv/McMotionRecord.srv
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/CommonRequest.idl"
+#include "aimdk_msgs/msg/CommonResponse.idl"
+
+module aimdk_msgs {
+  module srv {
+    module McMotionRecord_Request_Constants {
+      @verbatim (language="comment", text=
+        "上半身")
+      const int32 RECORD_UPPER = 1;
+      @verbatim (language="comment", text=
+        "下半身")
+      const int32 RECORD_LOWER = 2;
+      @verbatim (language="comment", text=
+        "全身")
+      const int32 RECORD_ALL = 3;
+      @verbatim (language="comment", text=
+        "开始录制")
+      const int32 OPER_START = 1;
+      @verbatim (language="comment", text=
+        "结束录制")
+      const int32 OPER_STOP = 2;
+      @verbatim (language="comment", text=
+        "暂停录制(产品暂时没提)")
+      const int32 OPER_PAUSE = 3;
+      @verbatim (language="comment", text=
+        "继续录制(产品暂时没提)")
+      const int32 OPER_RESUME = 4;
+    };
+    @verbatim (language="comment", text=
+      "Request 部分")
+    struct McMotionRecord_Request {
+      aimdk_msgs::msg::CommonRequest request;
+
+      @verbatim (language="comment", text=
+        "操作区域部分")
+      int32 record_area;
+
+      @verbatim (language="comment", text=
+        "操作模式部分")
+      int32 operation_type;
+
+      @verbatim (language="comment", text=
+        "录制时长限制")
+      int32 max_duration;
+
+      @verbatim (language="comment", text=
+        "存储路径")
+      string folder_path;
+
+      @verbatim (language="comment", text=
+        "文件名")
+      string file_name;
+    };
+    struct McMotionRecord_Response {
+      @verbatim (language="comment", text=
+        "Response 部分")
+      aimdk_msgs::msg::CommonResponse response;
+    };
+  };
+};

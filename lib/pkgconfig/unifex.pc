@@ -1,0 +1,10 @@
+prefix=/workspace/everyweek_build_tag/sim_mujoco/build/install
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libunifex
+Description: 
+Version: 0.1.0
+Requires:
+Libs: -L${libdir} -lunifex
+Cflags: -I${includedir}

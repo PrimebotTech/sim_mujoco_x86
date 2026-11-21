@@ -1,0 +1,54 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from aimdk_msgs/srv/SearchMusic.srv
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/CommonRequest.idl"
+#include "aimdk_msgs/msg/CommonResponse.idl"
+
+module aimdk_msgs {
+  module srv {
+    module SearchMusic_Request_Constants {
+      @verbatim (language="comment", text=
+        "sp 枚举" "\n"        "QQ音乐")
+      const int32 SP_TYPE_QM = 0;
+      @verbatim (language="comment", text=
+        "喜马拉雅")
+      const int32 SP_TYPE_XM = 1;
+      @verbatim (language="comment", text=
+        "library_mode 枚举" "\n"        "默认曲库")
+      const int32 LIBRARY_MODE_DEFAULT = 1;
+      @verbatim (language="comment", text=
+        "儿童曲库")
+      const int32 LIBRARY_MODE_CHILDREN = 2;
+      @verbatim (language="comment", text=
+        "默认歌曲数量")
+      const int32 SIZE_DEFAULT = 30;
+    };
+    struct SearchMusic_Request {
+      aimdk_msgs::msg::CommonRequest request;
+
+      @verbatim (language="comment", text=
+        "搜索文字")
+      string query;
+
+      @verbatim (language="comment", text=
+        "sp 类型, 默认0（qq音乐）")
+      int32 sp;
+
+      @verbatim (language="comment", text=
+        "请求歌曲数量，默认30")
+      int32 size;
+
+      @verbatim (language="comment", text=
+        "曲库，默认是1（默认曲库）")
+      int32 library_mode;
+    };
+    struct SearchMusic_Response {
+      aimdk_msgs::msg::CommonResponse response;
+
+      @verbatim (language="comment", text=
+        "搜索命令id")
+      uint64 search_command_id;
+    };
+  };
+};

@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from aimdk_msgs/msg/VolumeChange.msg
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/VolumeType.idl"
+
+module aimdk_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "音量类型")
+    struct VolumeChange {
+      aimdk_msgs::msg::VolumeType type;
+
+      @verbatim (language="comment", text=
+        "当前音量（0~100）")
+      uint32 audio_volume;
+    };
+  };
+};

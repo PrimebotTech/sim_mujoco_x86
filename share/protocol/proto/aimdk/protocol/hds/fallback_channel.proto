@@ -1,0 +1,31 @@
+syntax = "proto3";
+package aimdk.protocol;
+
+import "aimdk/protocol/common/timestamp.proto";
+import "aimdk/protocol/common/header.proto";
+
+/**
+ * @brief 降级信息
+ */
+message Fallback {
+  // 该降级决策产生的时间戳
+  Timestamp timestamp = 1;
+
+  // 降级策略码，映射一组降级动作
+  uint32 code = 2;
+
+  // 降级信息，用于扩展、打印调试
+  map<string, string> extra = 255;
+}
+
+/**
+ * @brief 降级信息消息
+ *        topic: /aima/hds/fallback
+ */
+message FallbackChannel {
+  // 消息头
+  Header header = 1;
+
+  // 数据内容
+  Fallback data = 2;
+}

@@ -1,0 +1,63 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from aimdk_msgs/srv/ControlMusic.srv
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/CommonRequest.idl"
+#include "aimdk_msgs/msg/CommonResponse.idl"
+
+module aimdk_msgs {
+  module srv {
+    module ControlMusic_Request_Constants {
+      @verbatim (language="comment", text=
+        "control_type 枚举" "\n"        "空类型")
+      const int32 CONTROL_TYPE_NONE = 0;
+      @verbatim (language="comment", text=
+        "播放")
+      const int32 CONTROL_TYPE_PLAY = 1;
+      @verbatim (language="comment", text=
+        "停止")
+      const int32 CONTROL_TYPE_STOP = 2;
+      @verbatim (language="comment", text=
+        "暂停")
+      const int32 CONTROL_TYPE_PAUSE = 3;
+      @verbatim (language="comment", text=
+        "恢复")
+      const int32 CONTROL_TYPE_RESUME = 4;
+      @verbatim (language="comment", text=
+        "上一首")
+      const int32 CONTROL_TYPE_PREVIOUS = 5;
+      @verbatim (language="comment", text=
+        "下一首")
+      const int32 CONTROL_TYPE_NEXT = 6;
+      @verbatim (language="comment", text=
+        "调试")
+      const int32 CONTROL_TYPE_DEBUG = 1000;
+    };
+    struct ControlMusic_Request {
+      aimdk_msgs::msg::CommonRequest request;
+
+      @verbatim (language="comment", text=
+        "控制类型")
+      int32 control_type;
+
+      @verbatim (language="comment", text=
+        "播放索引（从0开始），当 control_type == CONTROL_TYPE_PLAY 时有效，用于播放歌单中指定索引对应的歌曲。缺省时，默认播放当前歌曲（机器人播放器内部维护的一个索引）。")
+      int32 play_index;
+
+      @verbatim (language="comment", text=
+        "是否禁用自动播放下一首，当 control_type == CONTROL_TYPE_PLAY 时有效，默认false（默认开启自动播放下一首功能）。")
+      boolean no_auto_next;
+
+      @verbatim (language="comment", text=
+        "调试参数")
+      string debug_args;
+    };
+    struct ControlMusic_Response {
+      aimdk_msgs::msg::CommonResponse response;
+
+      @verbatim (language="comment", text=
+        "控制命令id")
+      uint64 control_command_id;
+    };
+  };
+};

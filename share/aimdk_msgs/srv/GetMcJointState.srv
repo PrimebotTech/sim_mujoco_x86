@@ -1,0 +1,10 @@
+# Request 部分
+CommonRequest request
+
+---
+
+# 响应头
+ResponseHeader header
+
+# Joint信息
+JointState[] joints

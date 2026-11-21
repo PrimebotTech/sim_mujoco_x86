@@ -1,0 +1,80 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from aimdk_msgs/msg/McCommonState.msg
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/McActionInfo.idl"
+#include "aimdk_msgs/msg/McFormState.idl"
+#include "aimdk_msgs/msg/McFsmState.idl"
+#include "aimdk_msgs/msg/McHandHeldState.idl"
+#include "aimdk_msgs/msg/McInputSource.idl"
+#include "aimdk_msgs/msg/McLiftState.idl"
+#include "aimdk_msgs/msg/McMotionStatus.idl"
+#include "aimdk_msgs/msg/McPosture.idl"
+#include "aimdk_msgs/msg/McPostureState.idl"
+#include "aimdk_msgs/msg/McRuntimeModel.idl"
+#include "aimdk_msgs/msg/McTaskInfo.idl"
+#include "aimdk_msgs/msg/MessageHeader.idl"
+
+module aimdk_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "-----------------------------------------------------------------------------------" "\n"
+      "机器人运控状态" "\n"
+      "-----------------------------------------------------------------------------------")
+    struct McCommonState {
+      aimdk_msgs::msg::MessageHeader header;
+
+      @verbatim (language="comment", text=
+        "------------ 输入源信息 ------------ #")
+      aimdk_msgs::msg::McInputSource input_source;
+
+      @verbatim (language="comment", text=
+        "----------- Action 信息 ----------- #")
+      aimdk_msgs::msg::McActionInfo action_info;
+
+      @verbatim (language="comment", text=
+        "--------- 机器运行模型信息 ---------- #")
+      aimdk_msgs::msg::McRuntimeModel runtime_model;
+
+      @verbatim (language="comment", text=
+        "--------- 动作运行信息 ---------- #")
+      aimdk_msgs::msg::McMotionStatus motion_status;
+
+      @verbatim (language="comment", text=
+        "--------- 有限状态机状态 ---------- #")
+      aimdk_msgs::msg::McFsmState fsm_state;
+
+      @verbatim (language="comment", text=
+        "--------- 机器人形态信息 ---------- #")
+      aimdk_msgs::msg::McFormState form_state;
+
+      @verbatim (language="comment", text=
+        "--------- 机器人姿态信息 ---------- #")
+      aimdk_msgs::msg::McPosture posture;
+
+      @verbatim (language="comment", text=
+        "----------机器人是否处于运动状态 ----------")
+      boolean is_moving;
+
+      @verbatim (language="comment", text=
+        "----------机器人是否摔倒（防摔检测触发后置 true；重新解锁站立防摔检测时置 false）----------")
+      boolean is_fallen;
+
+      @verbatim (language="comment", text=
+        "---------- 机器人提起检测状态 ---------- #")
+      aimdk_msgs::msg::McLiftState lift_state;
+
+      @verbatim (language="comment", text=
+        "---------- rpc 请求 执行状态 ----------")
+      aimdk_msgs::msg::McTaskInfo task_info;
+
+      @verbatim (language="comment", text=
+        "---------- 机器人牵手状态 ---------- #")
+      aimdk_msgs::msg::McHandHeldState held_state;
+
+      @verbatim (language="comment", text=
+        "---------- 机器人姿态检测结果 (站立/坐姿/仰卧/俯卧/未知) ---------- #")
+      aimdk_msgs::msg::McPostureState posture_state;
+    };
+  };
+};

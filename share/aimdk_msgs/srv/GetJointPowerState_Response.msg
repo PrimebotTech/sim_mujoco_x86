@@ -1,0 +1,12 @@
+
+
+
+# 响应头
+CommonResponse header
+
+uint8 power_state
+
+uint8 POWER_ON=1   # 电机上电
+uint8 POWER_OFF=2    # 电机下电
+
+

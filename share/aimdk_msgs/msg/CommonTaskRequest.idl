@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from aimdk_msgs/msg/CommonTaskRequest.msg
+// generated code does not contain a copyright notice
+
+#include "aimdk_msgs/msg/RequestHeader.idl"
+
+module aimdk_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "请求头")
+    struct CommonTaskRequest {
+      aimdk_msgs::msg::RequestHeader header;
+
+      @verbatim (language="comment", text=
+        "任务ID")
+      uint64 task_id;
+    };
+  };
+};

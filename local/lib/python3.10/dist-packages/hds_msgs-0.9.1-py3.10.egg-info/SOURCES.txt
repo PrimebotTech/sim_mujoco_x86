@@ -1,0 +1,9 @@
+setup.py
+hds_msgs/__init__.py
+hds_msgs.egg-info/PKG-INFO
+hds_msgs.egg-info/SOURCES.txt
+hds_msgs.egg-info/dependency_links.txt
+hds_msgs.egg-info/top_level.txt
+hds_msgs/msg/__init__.py
+hds_msgs/msg/_exception.py
+hds_msgs/msg/_exception_channel.py
